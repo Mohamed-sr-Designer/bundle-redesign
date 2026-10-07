@@ -59,10 +59,11 @@ const body = `
       <p class="sec-side" data-r>${t('We frame for every placement on the day, so the TV spot, the reel, the feed post and the mall screen are all native — never cropped in a panic.', 'نؤطّر لكل منصة في يوم التصوير نفسه، فيكون الإعلان التلفزيوني والريل والبوست وشاشة المول كلها أصلية — لا قص على عجل.')}</p>
     </div>
     <div class="ratios" data-r>
-      <div class="ratio r169">16:9<small>${t('TV · YouTube · LED', 'تلفزيون · يوتيوب · شاشات')}</small></div>
-      <div class="ratio r916">9:16<small>${t('Reels · TikTok', 'ريلز · تيك توك')}</small></div>
-      <div class="ratio r45">4:5<small>${t('Feed', 'المنشورات')}</small></div>
-      <div class="ratio r11">1:1<small>${t('Feed · Ads', 'المنشورات · إعلانات')}</small></div>
+      ${[['r169', '16:9', 'TV · YouTube · LED', 'تلفزيون · يوتيوب · شاشات'], ['r916', '9:16', 'Reels · TikTok', 'ريلز · تيك توك'], ['r45', '4:5', 'Feed', 'المنشورات'], ['r11', '1:1', 'Feed · Ads', 'المنشورات · إعلانات']].map(([c, r, en, ar]) => `
+      <figure class="ratio ${c}">
+        <div class="ratio-frame"><img src="assets/frames/year-geely.jpg" alt="" loading="lazy"><b dir="ltr">${r}</b></div>
+        <figcaption>${t(en, ar)}</figcaption>
+      </figure>`).join('')}
     </div>
   </div>
 </section>

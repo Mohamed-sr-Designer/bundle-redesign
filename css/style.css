@@ -1105,3 +1105,38 @@ html[dir="rtl"] .films-sec .geo-sun { left: auto; right: auto; }
 .films-sec.no-pin .films-track::before, .films-sec.no-pin .films-track::after { content: ""; flex: 0 0 1px; margin-inline: calc(var(--gutter) - 25px) 0; }
 .films-sec.no-pin .films-track { gap: 24px; }
 .films-sec.no-pin .films-track { scroll-padding-inline: var(--gutter); }
+
+/* ---------- Manifesto: tighter ---------- */
+.manifesto { padding-block: clamp(70px, 8vw, 120px); }
+.mf-text { max-width: 26ch; }
+
+/* ---------- Frame sizes: one row, same shot reframed ---------- */
+.ratios { --rh: min(320px, calc((100vw - 2 * var(--gutter) - 72px) / 4.14)); display: flex; flex-wrap: nowrap; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.ratio { margin: 0; display: block; width: auto; aspect-ratio: auto; border: 0; background: none; place-items: initial; font: inherit; }
+.ratio::before, .ratio::after { content: none; }
+.ratio:hover { background: none; }
+.ratio-frame { position: relative; height: var(--rh); border-radius: 12px; overflow: hidden; box-shadow: 0 0 0 1.5px var(--line); transition: box-shadow .4s, transform .5s var(--ease); }
+.ratio.r169 .ratio-frame { width: calc(var(--rh) * 16 / 9); }
+.ratio.r916 .ratio-frame { width: calc(var(--rh) * 9 / 16); }
+.ratio.r45 .ratio-frame { width: calc(var(--rh) * 4 / 5); }
+.ratio.r11 .ratio-frame { width: var(--rh); }
+.ratio.r169, .ratio.r916, .ratio.r45, .ratio.r11 { width: auto; }
+.ratio-frame img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) brightness(.8); transition: filter .4s, transform .8s var(--ease); }
+.ratio-frame::after { content: ""; position: absolute; inset: 10px; pointer-events: none; background: linear-gradient(var(--yellow), var(--yellow)) top left/18px 2px no-repeat, linear-gradient(var(--yellow), var(--yellow)) top left/2px 18px no-repeat, linear-gradient(var(--yellow), var(--yellow)) bottom right/18px 2px no-repeat, linear-gradient(var(--yellow), var(--yellow)) bottom right/2px 18px no-repeat; }
+.ratio-frame b { position: absolute; left: 12px; bottom: 12px; font: 700 clamp(.95rem, 1.4vw, 1.3rem)/1 var(--f-mono); color: var(--ink); background: var(--yellow); padding: 6px 9px; border-radius: 6px; }
+.ratio figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.ratio:hover .ratio-frame { box-shadow: 0 0 0 2px var(--yellow); transform: translateY(-6px); }
+.ratio:hover img { filter: none; transform: scale(1.05); }
+@media (max-width: 860px) {
+  .ratios { --rh: 46vw; flex-wrap: wrap; justify-content: flex-start; gap: 22px 14px; }
+  .ratio.r169 .ratio-frame { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .ratio.r169 { width: 100%; }
+}
+.ratio { text-align: start; }
+@media (max-width: 860px) {
+  .ratios { --rh: calc((100vw - 2 * var(--gutter) - 28px) / 2.3625); flex-wrap: wrap; justify-content: space-between; gap: 22px 14px; }
+  .ratio figcaption { font-size: 12px; }
+  .ratio-frame b { font-size: .8rem; left: 8px; bottom: 8px; padding: 4px 6px; }
+}
+.ratios { --rh: min(320px, calc((100vw - 2 * var(--gutter) - 110px) / 4.14)); }
+@media (max-width: 860px) { .ratios { --rh: calc((100vw - 2 * var(--gutter) - 60px) / 2.3625); } }

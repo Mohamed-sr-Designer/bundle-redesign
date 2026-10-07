@@ -71,11 +71,10 @@ const body = `
 
 <!-- ============ MANIFESTO ============ -->
 <section class="sec manifesto">
-  <div class="ghost-word" aria-hidden="true" data-drift="-1">BUNDLE BUNDLE</div>
   <div class="wrap">
-    <p class="eyebrow" data-r>${t('The pitch, in one paragraph', 'القصة في فقرة')}</p>
-    ${t('Most brands hire one agency to think, a second to film, and a third to throw the party — then wonder why it all feels like three different brands. We put the writers, the camera crew and the stage managers in one building. One brief goes in. One story comes out: on screen, on stage, and in the room.',
-      'أغلب العلامات تتعامل مع وكالة للأفكار، وثانية للتصوير، وثالثة للحفل — ثم تستغرب لماذا تبدو كثلاث علامات مختلفة. نحن جمعنا الكتّاب وفريق التصوير ومديري المسرح في مبنى واحد. موجز واحد يدخل، وقصة واحدة تخرج: على الشاشة، وعلى المسرح، وفي القاعة.',
+    <p class="eyebrow" data-r>${t('The pitch, in one line', 'القصة في سطر')}</p>
+    ${t('Three agencies make three brands. We put the writers, the camera crew and the stage managers in one building — one brief in, one story out.',
+      'ثلاث وكالات تصنع ثلاث علامات. نحن جمعنا الكتّاب وفريق التصوير ومديري المسرح في مبنى واحد — موجز واحد يدخل، وقصة واحدة تخرج.',
       'p', 'class="mf-text" data-words')}
   </div>
 </section>
