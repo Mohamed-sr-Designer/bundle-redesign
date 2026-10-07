@@ -61,7 +61,7 @@ const body = `
     <div class="ratios" data-r>
       ${[['r169', '16:9', 'TV · YouTube · LED', 'تلفزيون · يوتيوب · شاشات'], ['r916', '9:16', 'Reels · TikTok', 'ريلز · تيك توك'], ['r45', '4:5', 'Feed', 'المنشورات'], ['r11', '1:1', 'Feed · Ads', 'المنشورات · إعلانات']].map(([c, r, en, ar]) => `
       <figure class="ratio ${c}">
-        <div class="ratio-frame"><img src="assets/frames/year-geely.jpg" alt="" loading="lazy"><b dir="ltr">${r}</b></div>
+        <div class="ratio-frame"><b dir="ltr">${r}</b></div>
         <figcaption>${t(en, ar)}</figcaption>
       </figure>`).join('')}
     </div>
