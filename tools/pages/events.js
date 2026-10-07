@@ -1,4 +1,4 @@
-const { t, btn, page } = require('../lib');
+const { t, btn, PROJECTS, filmCard, page } = require('../lib');
 
 const formats = [
   ['Launch', 'إطلاق', 'Product & model launches', 'إطلاق المنتجات والموديلات', 'Reveal nights, showroom openings and press previews — the moment the cover comes off is designed first.', 'ليالي الكشف، افتتاح المعارض والعروض الصحفية — لحظة إزالة الغطاء تُصمَّم أولاً.', 'L1'],
@@ -14,7 +14,7 @@ const ros = [
   ['17:30', 'Tech rehearsal', 'البروفة التقنية', 'Cue-to-cue with lights, sound, presenters and the reveal mechanism.', 'بروفة كاملة على الإضاءة والصوت والمقدمين وآلية الكشف.'],
   ['19:00', 'Doors open', 'فتح الأبواب', 'Guest management, registration and hosts — content team already filming.', 'إدارة الضيوف والتسجيل والمضيفون — وفريق المحتوى يصوّر من البداية.'],
   ['20:15', 'The reveal', 'لحظة الكشف', 'The moment the whole night was built around. Three cameras on it.', 'اللحظة التي بُنيت حولها الليلة كلها. ثلاث كاميرات عليها.'],
-  ['22:30', 'Highlights live', 'نشر الملخص', 'Same-night edit posted while guests are still talking about it.', 'مونتاج نفس الليلة يُنشر والضيوف ما زالوا يتحدثون عنه.'],
+  ['22:30', 'Highlights live', 'نشر الملخص', 'Same-night edit posted while guests are still talking about it.', 'مونتاج الليلة نفسها يُنشر والضيوف ما زالوا يتحدثون عنه.'],
   ['01:00', 'Load-out', 'الفك والتحميل', "Last truck leaves. Press pack and report land the next morning.", 'آخر شاحنة تغادر. الملف الإعلامي والتقرير يصلان صباح اليوم التالي.'],
 ];
 
@@ -22,7 +22,7 @@ const checks = [
   ['Venue sourcing & permits', 'اختيار الموقع والتصاريح'], ['Concept, 3D & floor plans', 'الفكرة والتصورات ومخططات الأرضية'],
   ['Fabrication & install', 'التصنيع والتركيب'], ['Staging, AV, lighting & LED', 'المسرح والصوتيات والإضاءة والشاشات'],
   ['Invitations, RSVP & registration', 'الدعوات والتأكيد والتسجيل'], ['Hosts & promoter teams', 'المضيفون وفرق الترويج'],
-  ['Run-of-show & stage management', 'جدول الحفل وإدارة المسرح'], ['Content capture & same-night edit', 'تصوير المحتوى ومونتاج نفس الليلة'],
+  ['Run-of-show & stage management', 'جدول الحفل وإدارة المسرح'], ['Content capture & same-night edit', 'تصوير المحتوى ومونتاج الليلة نفسها'],
 ];
 const TICK = '<svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
@@ -32,7 +32,7 @@ const body = `
   <div class="ev-haze" aria-hidden="true"></div>
   <div class="wrap" style="position:relative">
     <p class="eyebrow" data-r>${t('Department 03 — Events & activations', 'القسم ٠٣ — الفعاليات والتفعيلات')}</p>
-    <h1 class="phero-h" data-r>${t('Doors open<br>at <em>seven.</em>', 'الأبواب تُفتح<br><em>السابعة.</em>')}</h1>
+    <h1 class="phero-h" data-r>${t('Doors open<br>at <em>seven.</em>', 'الأبواب تُفتح<br><em>الساعة السابعة.</em>')}</h1>
     <div class="phero-row">
       <div>
         <p class="phero-sub" data-r>${t('Launches, activations and brand experiences — from the first concept board to the last truck leaving the venue. One producer owns the night.', 'إطلاقات وتفعيلات وتجارب علامة — من أول لوحة فكرة إلى آخر شاحنة تغادر الموقع. منتج واحد مسؤول عن الليلة كاملة.')}</p>
@@ -48,7 +48,7 @@ const body = `
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Pick your <em>ticket.</em>', 'اختر <em>تذكرتك.</em>')}</h2>
+      <h2 class="h2" data-r>${t('Pick your <b>ticket.</b>', 'اختر <b>تذكرتك.</b>')}</h2>
       <p class="sec-side" data-r>${t('Six formats we run regularly. Most nights mix two or three of them.', 'ستة أنواع ننفذها باستمرار. أغلب الليالي تجمع اثنين أو ثلاثة منها.')}</p>
     </div>
     <div class="tickets">
@@ -67,7 +67,7 @@ const body = `
 <section class="sec" style="background:var(--ink-2)">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('A launch night, <em>minute by minute.</em>', 'ليلة إطلاق، <em>دقيقة بدقيقة.</em>')}</h2>
+      <h2 class="h2" data-r>${t('A launch night, <b>minute by minute.</b>', 'ليلة إطلاق، <b>دقيقة بدقيقة.</b>')}</h2>
       <p class="sec-side" data-r>${t('A typical run-of-show. Scroll and the playhead moves with you — this is the document your brand team gets a week before.', 'جدول حفل نموذجي. مرّر الصفحة وسيتحرك المؤشر معك — هذه الوثيقة يستلمها فريق علامتك قبل أسبوع.')}</p>
     </div>
     <div class="ros">
@@ -81,7 +81,7 @@ const body = `
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Everything on <em>the clipboard.</em>', 'كل شيء على <em>اللوح.</em>')}</h2>
+      <h2 class="h2" data-r>${t('Everything on <b>the clipboard.</b>', 'كل شيء <b>على القائمة.</b>')}</h2>
       <p class="sec-side" data-r>${t('One contract, one producer, one phone number on the night.', 'عقد واحد، منتج واحد، ورقم هاتف واحد ليلة الحدث.')}</p>
     </div>
     <div class="checklist">
@@ -92,15 +92,26 @@ const body = `
 
 <section class="sec" style="background:var(--ink-2)">
   <div class="wrap feature">
-    <div class="feature-img" data-r>
-      <img src="assets/work/geely-starray.png" alt="Geely Starray launch stand in a Kuwait mall" width="233" height="435" loading="lazy">
-      <span class="sticker">${t('Live in Kuwait', 'مباشر في الكويت')}</span>
+    <div class="feature-films">
+      ${PROJECTS.filter((x) => ['events-reel', 'alghanim'].includes(x.id)).map(filmCard).join('')}
     </div>
     <div>
       <p class="eyebrow" data-r>${t('On the floor', 'على الأرض')}</p>
-      <h2 class="h2" data-r style="margin-block:20px 24px">${t('Geely Starray, <em>centre court.</em>', 'جيلي ستاري، <em>في قلب المول.</em>')}</h2>
-      <p class="sec-side" data-r style="max-width:52ch">${t('A mall launch stand built around the car, the bilingual message and the photo moment — designed, fabricated and staffed by the same team that made the content for it.', 'منصة إطلاق في المول مبنية حول السيارة والرسالة باللغتين ولحظة الصورة — صمّمها وصنعها وأدارها نفس الفريق الذي صنع محتواها.')}</p>
+      <h2 class="h2" data-r style="margin-block:20px 24px">${t('Launch nights, <b>on repeat.</b>', 'ليالي إطلاق <b>لا تتوقف.</b>')}</h2>
+      <p class="sec-side" data-r style="max-width:52ch">${t('Rolls-Royce dinners, Shell Helix dealer nights, a mall stand for Ali Alghanim & Sons Automotive — designed, built, staffed and filmed by the same crew. Press play for the cut.', 'عشاءات رولز رويس، ليالي وكلاء شل هيلكس، وجناح في المول لعلي الغانم وأولاده للسيارات — صمّمها وبناها وأدارها وصوّرها الفريق نفسه. اضغط تشغيل وشاهد.')}</p>
       <div style="margin-top:30px">${btn('work.html', 'More work', 'أعمال أخرى', 'btn-ghost')}</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-r>${t('Seen from <b>the floor.</b>', 'من <b>قلب الحدث.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Frames from our own events — stands, stages, gala tables and the crowd.', 'لقطات من فعالياتنا — أجنحة، منصات، طاولات العشاء، والجمهور.')}</p>
+    </div>
+    <div class="collage">
+      ${[['alghanim-stand', 'Ali Alghanim & Sons — mall stand', 'علي الغانم وأولاده — جناح المول'], ['rr-gala', 'Rolls-Royce gala dinner', 'عشاء رولز رويس'], ['dj', 'Launch night', 'ليلة الإطلاق'], ['shell-helix', 'Shell Helix dealer night', 'ليلة وكلاء شل هيلكس'], ['car-stage', 'The reveal, from the rig', 'لحظة الكشف من الأعلى'], ['levelup', 'Level Up brand night', 'ليلة Level Up'], ['alghanim-display', 'Product wall, Alghanim Parts', 'جدار المنتجات، الغانم للقطع'], ['alghanim-guests', 'Opening-day guests', 'ضيوف يوم الافتتاح']].map(([s, en, ar]) => `<figure data-r><img src="assets/frames/${s}.jpg" alt="${en}" loading="lazy"><figcaption>${t(en, ar)}</figcaption></figure>`).join('')}
     </div>
   </div>
 </section>

@@ -1,9 +1,9 @@
-const { t, btn, page } = require('../lib');
+const { t, btn, PROJECTS, filmCard, page } = require('../lib');
 
 const caps = [
   ['Brand identity', 'هوية العلامة', 'Positioning, naming, identity systems and guidelines that make you recognisable before anyone reads a word.', 'التموضع، التسمية، أنظمة الهوية والأدلة الإرشادية — لتُعرف علامتك قبل أن يقرأ أحد كلمة.',
     [['Positioning & tone of voice', 'التموضع ونبرة الصوت'], ['Logo systems with bilingual lockups', 'شعارات بصيغ عربية وإنجليزية'], ['Brand book & asset library', 'دليل الهوية ومكتبة الملفات']]],
-  ['Campaign ideas', 'أفكار الحملات', 'One idea, built to stretch across film, social, press and on-ground at the same time — with the media split mapped beside it.', 'فكرة واحدة تمتد على الفيلم والسوشيال والصحافة والأرض في نفس الوقت — ومعها توزيع الوسائل.',
+  ['Campaign ideas', 'أفكار الحملات', 'One idea, built to stretch across film, social, press and on-ground at the same time — with the media split mapped beside it.', 'فكرة واحدة تمتد على الفيلم والسوشيال والصحافة والأرض في الوقت نفسه — ومعها توزيع الوسائل.',
     [['Concept & key visual', 'الفكرة والمرئي الرئيسي'], ['Scripts & storyboards', 'السيناريو والستوري بورد'], ['Media & channel plan', 'خطة الوسائل والقنوات']]],
   ['Content & social', 'المحتوى والسوشيال', 'Always-on content and channel management planned as a strategy, not a posting schedule.', 'محتوى مستمر وإدارة قنوات مبنية كاستراتيجية، لا كجدول نشر.',
     [['Monthly content calendars', 'تقويم محتوى شهري'], ['Arabic-first copywriting', 'كتابة عربية أولاً'], ['Community management', 'إدارة المجتمع والتفاعل']]],
@@ -13,6 +13,7 @@ const caps = [
 
 const body = `
 <section class="phero cr-hero">
+  <div class="cr-circus" aria-hidden="true" data-tilt><img src="assets/brand/circus.webp" alt="" width="762" height="830"></div>
   <div class="stickers" aria-hidden="true">
     <span class="sticker s1">${t('Big idea', 'فكرة كبيرة')}</span>
     <span class="sticker s2">${t('Arabic first', 'العربي أولاً')}</span>
@@ -45,29 +46,39 @@ const body = `
 <section class="sec light" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Every idea has to pass <em>the set test.</em>', 'كل فكرة لازم تنجح في <em>اختبار الموقع.</em>')}</h2>
+      <h2 class="h2" data-r>${t('Every idea has to pass <b>the set test.</b>', 'على كل فكرة أن تجتاز <b>اختبار موقع التصوير.</b>')}</h2>
       <p class="sec-side" data-r>${t("Our producers sit in the creative review. If an idea can't survive these three questions, it doesn't reach your inbox.", 'منتجونا يحضرون مراجعة الأفكار. أي فكرة لا تصمد أمام هذه الأسئلة الثلاثة لا تصل إلى بريدك.')}</p>
     </div>
     <div class="idea-test">
       <div class="test-card" data-r><span class="stamp">PASS</span><span class="eyebrow">Q.01</span>
-        <div><p class="q">${t('Can we shoot it?', 'هل نقدر نصوّرها؟')}</p><p>${t('Budget, permits, locations and talent checked before the concept is presented — not after it is approved.', 'الميزانية والتصاريح والمواقع والممثلون — نتحقق منها قبل عرض الفكرة، لا بعد اعتمادها.')}</p></div></div>
+        <div><p class="q">${t('Can we shoot it?', 'هل يمكن تصويرها؟')}</p><p>${t('Budget, permits, locations and talent checked before the concept is presented — not after it is approved.', 'الميزانية والتصاريح والمواقع والممثلون — نتحقق منها قبل عرض الفكرة، لا بعد اعتمادها.')}</p></div></div>
       <div class="test-card" data-r><span class="stamp">PASS</span><span class="eyebrow">Q.02</span>
-        <div><p class="q">${t('Can we stage it?', 'هل نقدر ننفّذها على الأرض؟')}</p><p>${t('If the idea works on screen but dies in a mall atrium, it is only half an idea. We build for both.', 'إذا نجحت الفكرة على الشاشة وماتت في ساحة المول، فهي نصف فكرة. نحن نبني للاثنين.')}</p></div></div>
+        <div><p class="q">${t('Can we stage it?', 'هل يمكن تنفيذها على الأرض؟')}</p><p>${t('If the idea works on screen but dies in a mall atrium, it is only half an idea. We build for both.', 'إذا نجحت الفكرة على الشاشة وماتت في ساحة المول، فهي نصف فكرة. نحن نبني للاثنين.')}</p></div></div>
       <div class="test-card" data-r><span class="stamp">PASS</span><span class="eyebrow">Q.03</span>
         <div><p class="q">${t('Does it land in Arabic first?', 'هل تصل بالعربي أولاً؟')}</p><p>${t('Campaigns here are read in Arabic. If the line only works in English, we start again.', 'الحملات هنا تُقرأ بالعربي. إذا كانت الجملة تنجح بالإنجليزي فقط، نبدأ من جديد.')}</p></div></div>
     </div>
   </div>
 </section>
 
+<section class="sec" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-r>${t('Ideas, <b>on screen.</b>', 'أفكار <b>على الشاشة.</b>')}</h2>
+      <p class="sec-side" data-r>${t('A national awareness campaign for Hayatt, and the motion piece that explains Bundle in under a minute.', 'حملة توعية وطنية لـ«حياة»، وموشن جرافيك يشرح Bundle في أقل من دقيقة.')}</p>
+    </div>
+    <div class="film-grid">${PROJECTS.filter((x) => ['hayatt', 'makes-bundle'].includes(x.id)).map(filmCard).join('')}</div>
+  </div>
+</section>
+
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Two languages. <em>Zero translation.</em>', 'لغتان. <em>بدون ترجمة.</em>')}</h2>
-      <p class="sec-side" data-r>${t('Arabic and English are written as two original pieces by two writers, from the same brief — then art-directed together.', 'العربي والإنجليزي يُكتبان كقطعتين أصليتين بيد كاتبين، من نفس الموجز — ثم يُخرجان فنياً معاً.')}</p>
+      <h2 class="h2" data-r>${t('Two languages. <b>Zero translation.</b>', 'لغتان. <b>بدون ترجمة.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Arabic and English are written as two original pieces by two writers, from the same brief — then art-directed together.', 'العربي والإنجليزي يُكتبان كقطعتين أصليتين بيد كاتبين، من الموجز نفسه — ثم يُخرجان فنياً معاً.')}</p>
     </div>
     <div class="bilingual">
       <div class="bi-card ar" data-r><span class="bi-glyph">ع</span><p>${t('Arabic copy is written first, by native writers who know how a headline sounds out loud in a Kuwaiti majlis.', 'النص العربي يُكتب أولاً، بيد كتّاب يعرفون كيف يُسمع العنوان في ديوانية كويتية.')}</p></div>
-      <div class="bi-card en" data-r><span class="bi-glyph">Aa</span><p>${t('English is a parallel original — same idea, its own rhythm. Logos and layouts get bilingual lockups from day one.', 'الإنجليزي نسخة أصلية موازية — نفس الفكرة بإيقاعها الخاص. والشعارات والتصاميم تُبنى باللغتين من اليوم الأول.')}</p></div>
+      <div class="bi-card en" data-r><span class="bi-glyph">Aa</span><p>${t('English is a parallel original — same idea, its own rhythm. Logos and layouts get bilingual lockups from day one.', 'الإنجليزي نسخة أصلية موازية — الفكرة نفسها بإيقاعها الخاص. والشعارات والتصاميم تُبنى باللغتين من اليوم الأول.')}</p></div>
     </div>
   </div>
 </section>

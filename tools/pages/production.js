@@ -1,13 +1,13 @@
-const { t, btn, filmStrip, page } = require('../lib');
+const { t, btn, filmStrip, PROJECTS, filmCard, page } = require('../lib');
 
 const caps = [
   ['TVCs & brand films', 'إعلانات وأفلام علامات', 'Scripted, cast, shot and finished in-house — so the hero film, the social cut-downs and the event screen all come from one master.', 'نكتبها ونختار ممثليها ونصوّرها وننهيها داخلياً — فيخرج الفيلم الرئيسي ومقاطع السوشيال وشاشة الحدث من نسخة أصلية واحدة.',
     [['Direction & cinematography', 'الإخراج والتصوير السينمائي'], ['Casting & locations', 'اختيار الممثلين والمواقع'], ['On-set art direction', 'الإخراج الفني في الموقع']]],
   ['Social-first content', 'محتوى للسوشيال أولاً', 'Short-form built for the thumb: vertical from the storyboard, hooks in the first second, subtitles burned in both languages.', 'محتوى قصير مصمم للإبهام: عمودي من الستوري بورد، جذب من أول ثانية، وترجمة مدمجة باللغتين.',
-    [['Reels, TikTok & Shorts', 'ريلز وتيك توك وشورتس'], ['Creator & interview sets', 'استوديوهات المؤثرين والمقابلات'], ['Same-day event edits', 'مونتاج الحدث في نفس اليوم']]],
+    [['Reels, TikTok & Shorts', 'ريلز وتيك توك وشورتس'], ['Creator & interview sets', 'استوديوهات المؤثرين والمقابلات'], ['Same-day event edits', 'مونتاج الحدث في اليوم نفسه']]],
   ['Photography', 'التصوير الفوتوغرافي', 'Campaign, product, portrait and event photography — lit and art-directed to match the film, not as an afterthought.', 'تصوير الحملات والمنتجات والبورتريه والفعاليات — بإضاءة وإخراج فني يطابق الفيلم، لا كإضافة لاحقة.',
     [['Campaign & key visuals', 'صور الحملات والمرئيات'], ['Studio & gelled portraits', 'تصوير استوديو بإضاءة ملوّنة'], ['Automotive & product', 'السيارات والمنتجات']]],
-  ['Motion & post', 'الموشن وما بعد الإنتاج', 'Edit, colour grade, sound mix, motion graphics and bilingual subtitling — finished under the same roof the footage was planned in.', 'مونتاج، تصحيح ألوان، مكساج صوت، موشن جرافيك وترجمة باللغتين — تُنجز تحت نفس السقف الذي خُطط فيه التصوير.',
+  ['Motion & post', 'الموشن وما بعد الإنتاج', 'Edit, colour grade, sound mix, motion graphics and bilingual subtitling — finished under the same roof the footage was planned in.', 'مونتاج، تصحيح ألوان، مكساج صوت، موشن جرافيك وترجمة باللغتين — تُنجز تحت السقف نفسه الذي خُطط فيه التصوير.',
     [['Offline & online edit', 'المونتاج الأولي والنهائي'], ['Grade & sound mix', 'الألوان والصوت'], ['2D motion & titles', 'موشن ثنائي الأبعاد وعناوين']]],
 ];
 
@@ -22,7 +22,7 @@ const body = `
     </div>
 
     <div class="monitor" data-r aria-hidden="true">
-      <div class="mon-screen"></div>
+      <div class="mon-screen"><video autoplay muted loop playsinline poster="assets/frames/hero-poster.jpg" src="assets/video/hero.mp4"></video></div>
       <div class="mon-safe"></div>
       <div class="mon-word">
         <span>${t('Roll sound', 'صوت')}</span><span>${t('Speed', 'جاهز')}</span><span>${t('Mark it', 'سجّل')}</span><span>${t('Action!', 'أكشن!')}</span>
@@ -55,14 +55,14 @@ const body = `
 <section class="sec" style="background:var(--ink-2)">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('One shoot. <em>Every frame size.</em>', 'تصوير واحد. <em>كل المقاسات.</em>')}</h2>
+      <h2 class="h2" data-r>${t('One shoot. <b>Every frame size.</b>', 'تصوير واحد. <b>كل المقاسات.</b>')}</h2>
       <p class="sec-side" data-r>${t('We frame for every placement on the day, so the TV spot, the reel, the feed post and the mall screen are all native — never cropped in a panic.', 'نؤطّر لكل منصة في يوم التصوير نفسه، فيكون الإعلان التلفزيوني والريل والبوست وشاشة المول كلها أصلية — لا قص على عجل.')}</p>
     </div>
     <div class="ratios" data-r>
       <div class="ratio r169">16:9<small>${t('TV · YouTube · LED', 'تلفزيون · يوتيوب · شاشات')}</small></div>
       <div class="ratio r916">9:16<small>${t('Reels · TikTok', 'ريلز · تيك توك')}</small></div>
-      <div class="ratio r45">4:5<small>${t('Feed', 'الفيد')}</small></div>
-      <div class="ratio r11">1:1<small>${t('Feed · Ads', 'الفيد · إعلانات')}</small></div>
+      <div class="ratio r45">4:5<small>${t('Feed', 'المنشورات')}</small></div>
+      <div class="ratio r11">1:1<small>${t('Feed · Ads', 'المنشورات · إعلانات')}</small></div>
     </div>
   </div>
 </section>
@@ -70,7 +70,7 @@ const body = `
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Pre. Shoot. <em>Post.</em>', 'قبل. أثناء. <em>بعد.</em>')}</h2>
+      <h2 class="h2" data-r>${t('Pre. Shoot. <b>Post.</b>', 'قبل. أثناء. <b>بعد.</b>')}</h2>
       <p class="sec-side" data-r>${t('Three phases, one producer from the first script note to the final delivery file.', 'ثلاث مراحل، ومنتج واحد من أول ملاحظة على السيناريو إلى آخر ملف تسليم.')}</p>
     </div>
     <div class="phases">
@@ -84,10 +84,20 @@ const body = `
   </div>
 </section>
 
-<section class="sec reel-sec" style="padding-top:0">
+<section class="sec" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-r>${t('Press <b>play.</b>', 'اضغط <b>تشغيل.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Films shot and finished on our floor — a Rolls-Royce in the desert, a brand film for Argan Bedaya, and a whole year cut into one reel.', 'أفلام صوّرناها وأنهيناها في استوديونا — رولز رويس في الصحراء، فيلم لعلامة أرجان بداية، وسنة كاملة في ريل واحد.')}</p>
+    </div>
+    <div class="film-grid">${PROJECTS.filter((x) => ['argan', 'rr-desert', 'year-2024', 'makes-bundle'].includes(x.id)).map(filmCard).join('')}</div>
+  </div>
+</section>
+
+<section class="sec reel-sec">
   <div class="wrap sec-head">
-    <h2 class="h2" data-r>${t('From the <em>camera roll.</em>', 'من <em>بكرة الكاميرا.</em>')}</h2>
-    <p class="sec-side" data-r>${t('Real frames from Bundle sets — interview studios, location shoots and gelled portrait sessions.', 'لقطات حقيقية من مواقع تصوير Bundle — استوديوهات مقابلات، تصوير خارجي، وجلسات بإضاءة ملوّنة.')}</p>
+    <h2 class="h2" data-r>${t('From the <b>camera roll.</b>', 'من <b>بكرة الكاميرا.</b>')}</h2>
+    <p class="sec-side" data-r>${t('Real frames from Bundle sets — desert shoots at golden hour, launch stages and mall builds.', 'لقطات حقيقية من مواقع تصوير Bundle — تصوير في الصحراء وقت الغروب، منصات إطلاق، وأجنحة في المولات.')}</p>
   </div>
   ${filmStrip(true)}
 </section>

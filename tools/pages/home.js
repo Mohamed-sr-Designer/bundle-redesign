@@ -1,4 +1,4 @@
-const { t, btn, ARROW, PLAY, STAR, filmStrip, page } = require('../lib');
+const { t, btn, ARROW, PLAY, STAR, GEO, PROJECTS, filmCard, filmStrip, stripeBand, page } = require('../lib');
 
 const rotEn = JSON.stringify(['show up.', 'go live.', 'get filmed.', 'sell out.', 'get talked about.']);
 const rotAr = JSON.stringify(['حاضرة.', 'على الهواء.', 'أمام الكاميرا.', 'حديث الناس.', 'لا تُنسى.']);
@@ -7,11 +7,11 @@ const ticker = (en, ar) => `<span>${t(en, ar)}</span>${STAR}`;
 
 const CREDITS = [
   ['Energy', 'الطاقة', ['Kuwait Oil Company', 'Shell']],
-  ['Automotive', 'السيارات', ['BMW', 'Porsche', 'Cadillac', 'Volvo', 'Geely', 'Haval', 'GWM Tank', 'Ali Alghanim & Sons']],
+  ['Automotive', 'السيارات', ['Rolls-Royce', 'BMW', 'Porsche', 'Cadillac', 'Volvo', 'Geely', 'Haval', 'GWM Tank', 'Ali Alghanim & Sons']],
   ['Fashion & Luxury', 'الأزياء والفخامة', ['Michael Kors', 'Orlebar Brown', 'il gufo', "Harper's Bazaar Arabia", 'Alyasra Fashion', 'Boutiqaat']],
   ['Retail & Malls', 'التجزئة والمولات', ['The Avenues', 'The Gate Mall']],
   ['Research & Institutions', 'البحث والمؤسسات', ['KISR', 'The National Fund', 'Markaz', 'Australian University Kuwait']],
-  ['Health', 'الصحة', ['Roche', 'Hayatt', 'Argan']],
+  ['Health & Community', 'الصحة والمجتمع', ['Roche', 'Hayatt', 'Argan']],
   ['FMCG & Services', 'السلع والخدمات', ['Kitco', 'Sara', 'Aqua Gulf', 'Alnasser', 'gig Kuwait', 'Cartoon Network']],
 ];
 const creditsBlock = CREDITS.map(([en, ar, names]) => `
@@ -23,6 +23,9 @@ const creditsBlock = CREDITS.map(([en, ar, names]) => `
 const body = `
 <!-- ============ HERO / VIEWFINDER ============ -->
 <section class="hero" data-spot>
+  <div class="hero-video" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/frames/hero-poster.jpg"><source src="assets/video/hero.mp4" type="video/mp4"></video>
+  </div>
   <div class="hero-spot" aria-hidden="true"></div>
   <div class="vf" aria-hidden="true">
     <i class="vf-c tl"></i><i class="vf-c tr"></i><i class="vf-c bl"></i><i class="vf-c br"></i>
@@ -33,22 +36,22 @@ const body = `
     <div class="vf-hud br">f/2.8 · 1/50 · 5600K</div>
   </div>
 
-  <a class="badge" href="#reel" data-cursor="Play" aria-label="Watch the reel">
+  <a class="badge" href="#films" data-cursor="Play" aria-label="Watch the films">
     <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bcirc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bcirc" textLength="486" lengthAdjust="spacing">Creative ✶ Production ✶ Events ✶ Kuwait ✶ </textPath></text></svg>
     <span class="badge-play">${PLAY}</span>
   </a>
 
   <div class="wrap hero-in">
     <p class="eyebrow hero-eyebrow" data-r>${t('Creative agency · Production house · Events company', 'وكالة إبداعية · بيت إنتاج · شركة فعاليات')}</p>
-    <h1 class="hero-h" data-r>
-      ${t('We make brands', 'نجعل علامتك', 'span', 'class="hero-l1"')}
+    <h1 class="hero-h">
+      ${t('We make brands', 'نجعل علامتك', 'span', 'class="hero-l1" data-split')}
       <span class="rot" data-rot-en='${rotEn}' data-rot-ar='${rotAr}'><span class="rot-w">show up.</span></span>
     </h1>
     <div class="hero-foot" data-r>
-      ${t('Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019.', 'في Bundle نفكّر فيها، نصوّرها، وننفّذها على الأرض — أفكار وأفلام وفعاليات حيّة يصنعها فريق واحد تحت سقف واحد في الكويت. منذ ٢٠١٩.', 'p', 'class="hero-sub"')}
+      ${t('Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019.', 'في Bundle نفكّر في الفكرة ونصوّرها وننفّذها على الأرض — أفكار وأفلام وفعاليات حيّة يصنعها فريق واحد تحت سقف واحد في الكويت، منذ ٢٠١٩.', 'p', 'class="hero-sub"')}
       <div class="hero-ctas">
         ${btn('contact.html', 'Brief us', 'أرسل فكرتك')}
-        <a class="btn btn-ghost" href="#reel" data-cursor="Play">${PLAY}${t('Watch the reel', 'شاهد الريل')}</a>
+        <a class="btn btn-ghost" href="#films" data-cursor="Play">${PLAY}${t('Watch the films', 'شاهد الأفلام')}</a>
       </div>
     </div>
   </div>
@@ -60,15 +63,15 @@ const body = `
   </nav>
 </section>
 
-<!-- ============ TICKER ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    ${(ticker('Think it', 'نفكّر فيها') + ticker('Shoot it', 'نصوّرها') + ticker('Stage it', 'ننفّذها') + ticker('Ship it', 'نطلقها')).repeat(3)}
-  </div>
+<!-- ============ CROSSED TICKERS ============ -->
+<div class="tickers" aria-hidden="true">
+  <div class="ticker ticker-b"><div class="ticker-track" data-marquee="-1">${(ticker('Content & digital', 'المحتوى والرقمي') + ticker('PR & communications', 'العلاقات العامة') + ticker('Film & visuals', 'الأفلام والمرئيات') + ticker('Events & experiences', 'الفعاليات والتجارب')).repeat(3)}</div></div>
+  <div class="ticker ticker-a"><div class="ticker-track" data-marquee="1">${(ticker('Think it', 'نفكّر فيها') + ticker('Shoot it', 'نصوّرها') + ticker('Stage it', 'ننفّذها') + ticker('Ship it', 'نطلقها')).repeat(3)}</div></div>
 </div>
 
 <!-- ============ MANIFESTO ============ -->
 <section class="sec manifesto">
+  <div class="ghost-word" aria-hidden="true" data-drift="-1">BUNDLE BUNDLE</div>
   <div class="wrap">
     <p class="eyebrow" data-r>${t('The pitch, in one paragraph', 'القصة في فقرة')}</p>
     ${t('Most brands hire one agency to think, a second to film, and a third to throw the party — then wonder why it all feels like three different brands. We put the writers, the camera crew and the stage managers in one building. One brief goes in. One story comes out: on screen, on stage, and in the room.',
@@ -81,8 +84,8 @@ const body = `
 <section class="sec depts-sec" id="departments">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('Three departments.<br><em>One call sheet.</em>', 'ثلاثة أقسام.<br><em>جدول تصوير واحد.</em>')}</h2>
-      <p class="sec-side" data-r>${t('Hover a door. Every department can run a job alone — they are better when the same brief runs through all three.', 'مرّر على أي باب. كل قسم يقدر يشتغل لوحده — لكن النتيجة أقوى لما يمرّ نفس الموجز على الثلاثة.')}</p>
+      <h2 class="h2" data-r>${t('Three departments. <b>One call sheet.</b>', 'ثلاثة أقسام. <b>جدول واحد.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Hover a door. Every department can run a job alone — they are better when the same brief runs through all three.', 'مرّر على أي باب. كل قسم قادر على تنفيذ المشروع وحده — لكن النتيجة أقوى عندما يمرّ الموجز نفسه على الأقسام الثلاثة.')}</p>
     </div>
 
     <div class="depts">
@@ -94,7 +97,7 @@ const body = `
         <div class="dept-top"><i>01</i><span class="dept-go">${ARROW}</span></div>
         <div class="dept-body">
           <h3>${t('Creative', 'الإبداع')}</h3>
-          <p>${t('Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft.', 'هوية العلامة، أفكار الحملات، المحتوى، السوشيال والعلاقات العامة — مكتوبة بالعربي والإنجليزي من أول مسودة.')}</p>
+          <p>${t('Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft.', 'هوية العلامة، أفكار الحملات، المحتوى، السوشيال ميديا والعلاقات العامة — بالعربية والإنجليزية من أول مسودة.')}</p>
           <ul>${['Brand', 'Campaigns', 'Content', 'Social', 'PR'].map((x, i) => `<li>${t(x, ['الهوية', 'الحملات', 'المحتوى', 'السوشيال', 'العلاقات العامة'][i])}</li>`).join('')}</ul>
         </div>
       </a>
@@ -102,18 +105,18 @@ const body = `
       <a class="dept dept-production" href="production.html" data-cursor="Roll">
         <div class="dept-art" aria-hidden="true">
           <svg class="clap" viewBox="0 0 200 160">
-            <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#F3F0E8"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#0A0A0C"/></g>
-            <rect x="10" y="54" width="180" height="96" rx="4" fill="#0A0A0C" stroke="#F3F0E8" stroke-width="3"/>
-            <path d="M10 66h180M28 54v12M70 54v12M112 54v12M154 54v12" stroke="#F3F0E8" stroke-width="2"/>
-            <text x="22" y="92" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="11">PROD  BUNDLE</text>
-            <text x="22" y="112" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="11">SCENE 01   TAKE 07</text>
-            <text x="22" y="132" fill="#FFD400" font-family="JetBrains Mono, monospace" font-size="11">ROLL A004</text>
+            <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#F6F1E4"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#12152B"/></g>
+            <rect x="10" y="54" width="180" height="96" rx="4" fill="#12152B" stroke="#F6F1E4" stroke-width="3"/>
+            <path d="M10 66h180M28 54v12M70 54v12M112 54v12M154 54v12" stroke="#F6F1E4" stroke-width="2"/>
+            <text x="22" y="92" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="11">PROD  BUNDLE</text>
+            <text x="22" y="112" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="11">SCENE 01   TAKE 07</text>
+            <text x="22" y="132" fill="#FCD535" font-family="JetBrains Mono, monospace" font-size="11">ROLL A004</text>
           </svg>
         </div>
         <div class="dept-top"><i>02</i><span class="dept-go">${ARROW}</span></div>
         <div class="dept-body">
           <h3>${t('Production', 'الإنتاج')}</h3>
-          <p>${t('TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house.', 'إعلانات تلفزيونية، أفلام علامات، مقاطع سوشيال، تصوير فوتوغرافي وموشن — نكتبها ونصوّرها وننهيها داخلياً.')}</p>
+          <p>${t('TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house.', 'إعلانات تلفزيونية، أفلام للعلامات، مقاطع للسوشيال ميديا، تصوير فوتوغرافي وموشن — نكتبها ونصوّرها وننهيها داخلياً.')}</p>
           <ul>${['Film', 'Photo', 'Motion', 'Post', 'Live'].map((x, i) => `<li>${t(x, ['أفلام', 'تصوير', 'موشن', 'مونتاج', 'بث مباشر'][i])}</li>`).join('')}</ul>
         </div>
       </a>
@@ -126,7 +129,7 @@ const body = `
         <div class="dept-top"><i>03</i><span class="dept-go">${ARROW}</span></div>
         <div class="dept-body">
           <h3>${t('Events', 'الفعاليات')}</h3>
-          <p>${t('Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night.', 'إطلاقات، تفعيلات في المولات، معارض وأيام إعلامية — من الفكرة والتنفيذ وجدول الحفل إلى الفريق في ليلة الحدث.')}</p>
+          <p>${t('Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night.', 'إطلاقات، تفعيلات في المولات، معارض وأيام إعلامية — من الفكرة والتنفيذ وجدول الحفل حتى الفريق في ليلة الحدث.')}</p>
           <ul>${['Launches', 'Activations', 'Exhibitions', 'Press days', 'Pop-ups'].map((x, i) => `<li>${t(x, ['إطلاقات', 'تفعيلات', 'معارض', 'أيام إعلامية', 'متاجر مؤقتة'][i])}</li>`).join('')}</ul>
         </div>
       </a>
@@ -134,24 +137,61 @@ const body = `
   </div>
 </section>
 
-<!-- ============ REEL ============ -->
+<!-- ============ FILMS — pinned horizontal reel ============ -->
+<section class="films-sec" id="films">
+  <div class="films-pin">
+    ${GEO()}
+    <div class="films-head wrap">
+      <p class="eyebrow">${t('Now showing', 'يُعرض الآن')}</p>
+      <h2 class="h2 films-h">${t('Bigger <b>work.</b>', 'شغل <b>أكبر.</b>')}</h2>
+      <p class="films-sub">${t('Real films from the Bundle floor. Hover to preview, click to play.', 'أفلام حقيقية من استوديو Bundle. مرّر للمعاينة، واضغط للتشغيل.')}</p>
+    </div>
+    <div class="films-track" data-hscroll>
+      ${PROJECTS.map(filmCard).join('')}
+      <a class="film-more" href="work.html" data-cursor="All">
+        <span>${t('All the <b>work</b>', 'كل <b>الأعمال</b>')}</span>${ARROW}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE BUNDLE SHOW (circus) ============ -->
+<section class="show">
+  <div class="show-bg" aria-hidden="true">
+    <i class="show-blob b1" data-speed="0.18"></i><i class="show-blob b2" data-speed="-0.12"></i><i class="show-dots" data-speed="0.3"></i>
+  </div>
+  <div class="wrap show-in">
+    <div class="show-copy">
+      <p class="eyebrow" data-r>${t('The Bundle show', 'عرض Bundle')}</p>
+      <h2 class="h2" data-r>${t('It takes a circus <b>to pull off a launch.</b>', 'إطلاق ناجح <b>يحتاج سيركاً كاملاً.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Magicians, acrobats, a ringmaster and someone juggling the clock. Ours happens to run on a call sheet — so the magic shows up on time.', 'سحرة، بهلوانات، مدير حلبة، وشخص يلاعب الوقت. سيركنا يمشي على جدول دقيق — فيصل السحر في موعده.')}</p>
+      <div class="show-acts" data-r>
+        <span>${t('Ideas', 'أفكار')}</span><span>${t('Film', 'أفلام')}</span><span>${t('Stage', 'مسرح')}</span><span>${t('PR', 'إعلام')}</span>
+      </div>
+    </div>
+    <div class="show-art" data-tilt>
+      <img src="assets/brand/circus.webp" alt="Illustrated cast of performers: a card trick, a magician pulling a rabbit, a unicyclist, parachutists and a ringmaster holding a broken clock" width="762" height="830" loading="lazy">
+    </div>
+  </div>
+</section>
+
+${stripeBand('Where integration happens.', 'حيث يحدث التكامل.')}
+
+<!-- ============ REEL STRIP ============ -->
 <section class="sec reel-sec" id="reel">
   <div class="wrap sec-head">
-    <h2 class="h2" data-r>${t('Shot, built and run <em>by us.</em>', 'صوّرناها وبنيناها <em>وأدرناها بأنفسنا.</em>')}</h2>
-    <p class="sec-side" data-r>${t('Frames from recent launches, shoots and set builds. No stock, no hand-offs — the crew that pitched it is the crew that shot it.', 'لقطات من إطلاقات وتصويرات وبناء مواقع حديثة. لا صور جاهزة ولا تسليم بين شركات — الفريق الذي قدّم الفكرة هو من صوّرها.')}</p>
+    <h2 class="h2" data-r>${t('Shot, built and run <b>by us.</b>', 'صوّرناها وبنيناها <b>وأدرناها بأنفسنا.</b>')}</h2>
+    <p class="sec-side" data-r>${t('Frames from our own sets — launch nights, mall stands and a Rolls-Royce in the desert at golden hour. No stock, no hand-offs.', 'لقطات من مواقع تصويرنا — ليالي إطلاق، أجنحة في المولات، ورولز رويس في الصحراء وقت الغروب. لا صور جاهزة ولا وسطاء.')}</p>
   </div>
   ${filmStrip()}
-  <div class="wrap reel-foot">
-    ${btn('work.html', 'See the work', 'شاهد الأعمال', 'btn-ghost')}
-  </div>
 </section>
 
 <!-- ============ RUN OF SHOW ============ -->
 <section class="sec light ros-sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r>${t('How a job runs. <em>Call times included.</em>', 'كيف يمشي المشروع. <em>بالمواعيد.</em>')}</h2>
-      <p class="sec-side" data-r>${t('Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next.', 'كل مشروع عندنا يمشي على جدول تصوير — نفس الوثيقة التي يعيش عليها أي موقع تصوير. تعرف دائماً ما يحدث اليوم وما القادم.')}</p>
+      <h2 class="h2" data-r>${t('How a job runs. <b>Call times included.</b>', 'كيف يسير المشروع. <b>بالمواعيد.</b>')}</h2>
+      <p class="sec-side" data-r>${t('Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next.', 'كل مشروع عندنا يسير على جدول تصوير — الوثيقة نفسها التي يعمل بها أي موقع تصوير. تعرف دائماً ما يحدث اليوم وما القادم.')}</p>
     </div>
 
     <div class="callsheet" data-r>
@@ -160,10 +200,10 @@ const body = `
       </div>
       ${[
         ['09:00', 'Brief', 'الموجز', 'We start with the business problem, not our service list. One call, one page, one metric we agree to be judged on.', 'نبدأ من مشكلتك التجارية لا من قائمة خدماتنا. مكالمة واحدة، صفحة واحدة، ومؤشر واحد نتفق أن نُقاس عليه.'],
-        ['11:30', 'The big idea', 'الفكرة الكبيرة', 'One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it.', 'فكرة واحدة مصمّمة لتعيش على الشاشة وعلى المسرح وفي الفيد في نفس الوقت — ومعها توزيع الميزانية.'],
-        ['14:00', 'Pre-production', 'ما قبل الإنتاج', 'Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls.', 'سيناريو، ستوري بورد، مواقع، تصاريح، اختيار ممثلين، ورسومات التنفيذ. كل شيء معتمد قبل ما تدور الكاميرا.'],
-        ['19:00', 'Showtime', 'وقت العرض', 'Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox.', 'يوم التصوير أو ليلة الإطلاق أو انطلاق الحملة. فريقنا في الموقع وعلى المسرح وعلى رسائل الجمهور.'],
-        ['23:59', "That's a wrap", 'انتهى التصوير', 'Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00.', 'ملخص في نفس الليلة، ملف إعلامي في اليوم التالي، وتقرير مقابل المؤشر الذي اتفقنا عليه الساعة ٩:٠٠.'],
+        ['11:30', 'The big idea', 'الفكرة الكبيرة', 'One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it.', 'فكرة واحدة مصمّمة لتعيش على الشاشة وعلى المسرح وفي المنصات في الوقت نفسه — ومعها توزيع الميزانية.'],
+        ['14:00', 'Pre-production', 'ما قبل الإنتاج', 'Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls.', 'سيناريو، ستوري بورد، مواقع، تصاريح، اختيار الممثلين، ورسومات التنفيذ. كل شيء معتمد قبل أن تدور الكاميرا.'],
+        ['19:00', 'Showtime', 'وقت العرض', 'Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox.', 'يوم التصوير أو ليلة الإطلاق أو انطلاق الحملة. فريقنا في الموقع وعلى المسرح وفي الرد على الجمهور.'],
+        ['23:59', "That's a wrap", 'انتهى التصوير', 'Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00.', 'ملخص في الليلة نفسها، ملف إعلامي في اليوم التالي، وتقرير مقابل المؤشر الذي اتفقنا عليه الساعة ٩:٠٠.'],
       ].map(([time, en, ar, den, dar], i) => `
       <div class="cs-row" data-r>
         <span class="cs-time" dir="ltr">${time}</span>
@@ -180,14 +220,14 @@ const body = `
   <div class="wrap credits-grid">
     <div>
       <p class="eyebrow" data-r>${t('Starring', 'بطولة')}</p>
-      <h2 class="h2" data-r>${t('30+ brands <em>in the credits.</em>', 'أكثر من ٣٠ علامة <em>في التترات.</em>')}</h2>
-      <p class="sec-side" data-r>${t('From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew.', 'من الطاقة الوطنية إلى السيارات العالمية والأزياء الفاخرة. قاعات مختلفة وجهات تنظيمية مختلفة — نفس الفريق.')}</p>
+      <h2 class="h2" data-r>${t('30+ brands <b>in the credits.</b>', 'أكثر من ٣٠ علامة <b>في التترات.</b>')}</h2>
+      <p class="sec-side" data-r>${t('From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew.', 'من الطاقة الوطنية إلى السيارات العالمية والأزياء الفاخرة. قاعات مختلفة وجهات تنظيمية مختلفة — والفريق نفسه.')}</p>
       ${btn('work.html', 'The client list', 'قائمة العملاء', 'btn-ghost')}
     </div>
     <div class="credits" aria-label="Clients">
       <div class="credits-roll">
         ${creditsBlock}
-        <div class="cr-group cr-end"><p class="cr-role">${t('Produced by', 'إنتاج')}</p><p class="cr-name cr-logo"><img src="assets/logo-yellow-bundle.png" alt="Bundle" width="120" height="34"></p></div>
+        <div class="cr-group cr-end"><p class="cr-role">${t('Produced by', 'إنتاج')}</p><p class="cr-name cr-logo"><img src="assets/brand/logo-tag.png" alt="Bundle" width="200" height="100"></p></div>
       </div>
     </div>
   </div>
@@ -196,7 +236,7 @@ const body = `
 <!-- ============ FACTS ============ -->
 <section class="facts">
   <div class="wrap facts-row">
-    <div class="fact" data-r><b>2019</b>${t('Doors opened in Kuwait', 'افتتحنا في الكويت')}</div>
+    <div class="fact" data-r><b>2019</b>${t('Doors opened in Kuwait', 'بدأنا في الكويت')}</div>
     <div class="fact" data-r><b><span data-count="30">30</span>+</b>${t('Brands in the credits', 'علامة في التترات')}</div>
     <div class="fact" data-r><b>3<small>/1</small></b>${t('Departments, one building', 'أقسام في مبنى واحد')}</div>
     <div class="fact" data-r><b>AR<small>+</small>EN</b>${t('Written natively, never translated', 'كتابة أصلية لا ترجمة')}</div>
@@ -205,15 +245,16 @@ const body = `
 
 <!-- ============ CTA ============ -->
 <section class="cta-scene">
+  <div class="cta-stripes" aria-hidden="true"></div>
   <div class="wrap cta-in">
     <svg class="cta-clap" viewBox="0 0 200 160" aria-hidden="true">
-      <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#0A0A0C"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#FFD400"/></g>
-      <rect x="10" y="54" width="180" height="96" rx="4" fill="#0A0A0C"/>
-      <text x="24" y="98" fill="#FFD400" font-family="JetBrains Mono, monospace" font-size="13">SCENE: YOURS</text>
-      <text x="24" y="122" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="13">TAKE 01</text>
+      <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#12152B"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#FCD535"/></g>
+      <rect x="10" y="54" width="180" height="96" rx="4" fill="#12152B"/>
+      <text x="24" y="98" fill="#FCD535" font-family="JetBrains Mono, monospace" font-size="13">SCENE: YOURS</text>
+      <text x="24" y="122" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="13">TAKE 01</text>
     </svg>
-    <h2 class="cta-h">${t("Got a launch, a film<br>or a crazy idea?", 'عندك إطلاق، فيلم<br>أو فكرة مجنونة؟')}</h2>
-    <p>${t('Send the brief. A producer calls you back within two working days.', 'أرسل الموجز. منتج من فريقنا يتصل بك خلال يومي عمل.')}</p>
+    <h2 class="cta-h">${t('Got a launch, a film<br>or a crazy idea?', 'عندك إطلاق، فيلم<br>أو فكرة مجنونة؟')}</h2>
+    <p>${t('Send the brief. A producer calls you back within two working days.', 'أرسل الموجز، وسيتصل بك منتج من فريقنا خلال يومي عمل.')}</p>
     <div class="hero-ctas">
       ${btn('contact.html', 'Brief us', 'أرسل فكرتك', 'btn-ink')}
       <a class="btn btn-line" href="tel:+96597403924"><span dir="ltr">+965 9740 3924</span></a>
@@ -223,7 +264,6 @@ const body = `
 `;
 
 module.exports = page({
-  file: 'index.html',
   active: 'home',
   title: 'Bundle — Creative Agency, Production House & Events Company in Kuwait',
   desc: 'Bundle thinks it, shoots it and stages it: brand ideas, film and photo production, launches and activations — one crew under one roof in Kuwait since 2019.',

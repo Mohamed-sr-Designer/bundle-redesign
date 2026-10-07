@@ -5,24 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bundle — Creative Agency, Production House &amp; Events Company in Kuwait</title>
 <meta name="description" content="Bundle thinks it, shoots it and stages it: brand ideas, film and photo production, launches and activations — one crew under one roof in Kuwait since 2019.">
-<meta name="theme-color" content="#0A0A0C">
+<meta name="theme-color" content="#12152B">
 <meta property="og:title" content="Bundle — Creative Agency, Production House &amp; Events Company in Kuwait">
 <meta property="og:description" content="Bundle thinks it, shoots it and stages it: brand ideas, film and photo production, launches and activations — one crew under one roof in Kuwait since 2019.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/frames/hero-poster.jpg">
 <link rel="icon" href="assets/logo-yellow-bundle.png">
+<script>try{var L=localStorage.getItem('bundle-lang');if(L==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}if(!sessionStorage.getItem('bundle-seen'))document.documentElement.classList.add('is-loading');if(sessionStorage.getItem('bundle-curtain')){document.documentElement.classList.add('is-covered');sessionStorage.removeItem('bundle-curtain')}}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Alexandria:wght@300..900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Alexandria:wght@200..900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="pg-home" id="top">
 
 <a class="skip" href="#main">Skip to content</a>
+<div class="loader" aria-hidden="true">
+  <div class="loader-stripes"></div>
+  <div class="loader-in">
+    <img src="assets/brand/logo-tag.png" alt="" width="420" height="210">
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-meta"><span>ALL CONNECTED</span><span class="loader-n">00</span></div>
+  </div>
+</div>
+<div class="curtain" aria-hidden="true"><i></i></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><b></b></span></div>
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="logo" href="index.html" aria-label="Bundle — home"><img src="assets/logo-yellow-bundle.png" alt="Bundle" width="122" height="34"></a>
+    <a class="logo" href="index.html" aria-label="Bundle — home"><img src="assets/brand/logo-xl.png" alt="Bundle" width="100" height="40"></a>
     <div class="hdr-rec" aria-hidden="true"><i class="rec-dot"></i><span>REC</span><span class="tc" data-tc>00:00:00:00</span></div>
     <nav class="hdr-nav" aria-label="Primary">
       <a href="creative.html"><span data-en="Creative" data-ar="الإبداع">Creative</span></a>
@@ -31,8 +42,8 @@
       <a href="work.html"><span data-en="Work" data-ar="أعمالنا">Work</span></a>
     </nav>
     <div class="hdr-tools">
-      <button class="lang" type="button" data-lang-toggle aria-label="Switch language"><span class="lang-en">EN</span><span class="lang-ar">ع</span></button>
-      <a class="btn btn-sm hdr-cta" href="contact.html"><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span></a>
+      <button class="lang" type="button" data-lang-toggle aria-label="Switch language / تغيير اللغة"><span class="lang-en">EN</span><span class="lang-ar">ع</span></button>
+      <a class="btn btn-sm hdr-cta" href="contact.html" data-brief><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span></a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><i></i><i></i></button>
     </div>
   </div>
@@ -69,6 +80,9 @@
 
 <!-- ============ HERO / VIEWFINDER ============ -->
 <section class="hero" data-spot>
+  <div class="hero-video" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/frames/hero-poster.jpg"><source src="assets/video/hero.mp4" type="video/mp4"></video>
+  </div>
   <div class="hero-spot" aria-hidden="true"></div>
   <div class="vf" aria-hidden="true">
     <i class="vf-c tl"></i><i class="vf-c tr"></i><i class="vf-c bl"></i><i class="vf-c br"></i>
@@ -79,22 +93,22 @@
     <div class="vf-hud br">f/2.8 · 1/50 · 5600K</div>
   </div>
 
-  <a class="badge" href="#reel" data-cursor="Play" aria-label="Watch the reel">
+  <a class="badge" href="#films" data-cursor="Play" aria-label="Watch the films">
     <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="bcirc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bcirc" textLength="486" lengthAdjust="spacing">Creative ✶ Production ✶ Events ✶ Kuwait ✶ </textPath></text></svg>
     <span class="badge-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
   </a>
 
   <div class="wrap hero-in">
     <p class="eyebrow hero-eyebrow" data-r><span data-en="Creative agency · Production house · Events company" data-ar="وكالة إبداعية · بيت إنتاج · شركة فعاليات">Creative agency · Production house · Events company</span></p>
-    <h1 class="hero-h" data-r>
-      <span class="hero-l1" data-en="We make brands" data-ar="نجعل علامتك">We make brands</span>
+    <h1 class="hero-h">
+      <span class="hero-l1" data-split data-en="We make brands" data-ar="نجعل علامتك">We make brands</span>
       <span class="rot" data-rot-en='["show up.","go live.","get filmed.","sell out.","get talked about."]' data-rot-ar='["حاضرة.","على الهواء.","أمام الكاميرا.","حديث الناس.","لا تُنسى."]'><span class="rot-w">show up.</span></span>
     </h1>
     <div class="hero-foot" data-r>
-      <p class="hero-sub" data-en="Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019." data-ar="في Bundle نفكّر فيها، نصوّرها، وننفّذها على الأرض — أفكار وأفلام وفعاليات حيّة يصنعها فريق واحد تحت سقف واحد في الكويت. منذ ٢٠١٩.">Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019.</p>
+      <p class="hero-sub" data-en="Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019." data-ar="في Bundle نفكّر في الفكرة ونصوّرها وننفّذها على الأرض — أفكار وأفلام وفعاليات حيّة يصنعها فريق واحد تحت سقف واحد في الكويت، منذ ٢٠١٩.">Bundle thinks it, shoots it and stages it — ideas, films and live events made by one crew under one roof in Kuwait. Since 2019.</p>
       <div class="hero-ctas">
-        <a class="btn " href="contact.html"><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-ghost" href="#reel" data-cursor="Play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg><span data-en="Watch the reel" data-ar="شاهد الريل">Watch the reel</span></a>
+        <a class="btn " href="contact.html" data-brief><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="#films" data-cursor="Play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg><span data-en="Watch the films" data-ar="شاهد الأفلام">Watch the films</span></a>
       </div>
     </div>
   </div>
@@ -106,15 +120,15 @@
   </nav>
 </section>
 
-<!-- ============ TICKER ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
-  </div>
+<!-- ============ CROSSED TICKERS ============ -->
+<div class="tickers" aria-hidden="true">
+  <div class="ticker ticker-b"><div class="ticker-track" data-marquee="-1"><span><span data-en="Content &amp; digital" data-ar="المحتوى والرقمي">Content & digital</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="PR &amp; communications" data-ar="العلاقات العامة">PR & communications</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Film &amp; visuals" data-ar="الأفلام والمرئيات">Film & visuals</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Events &amp; experiences" data-ar="الفعاليات والتجارب">Events & experiences</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Content &amp; digital" data-ar="المحتوى والرقمي">Content & digital</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="PR &amp; communications" data-ar="العلاقات العامة">PR & communications</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Film &amp; visuals" data-ar="الأفلام والمرئيات">Film & visuals</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Events &amp; experiences" data-ar="الفعاليات والتجارب">Events & experiences</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Content &amp; digital" data-ar="المحتوى والرقمي">Content & digital</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="PR &amp; communications" data-ar="العلاقات العامة">PR & communications</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Film &amp; visuals" data-ar="الأفلام والمرئيات">Film & visuals</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Events &amp; experiences" data-ar="الفعاليات والتجارب">Events & experiences</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg></div></div>
+  <div class="ticker ticker-a"><div class="ticker-track" data-marquee="1"><span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Think it" data-ar="نفكّر فيها">Think it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Shoot it" data-ar="نصوّرها">Shoot it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Stage it" data-ar="ننفّذها">Stage it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Ship it" data-ar="نطلقها">Ship it</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg></div></div>
 </div>
 
 <!-- ============ MANIFESTO ============ -->
 <section class="sec manifesto">
+  <div class="ghost-word" aria-hidden="true" data-drift="-1">BUNDLE BUNDLE</div>
   <div class="wrap">
     <p class="eyebrow" data-r><span data-en="The pitch, in one paragraph" data-ar="القصة في فقرة">The pitch, in one paragraph</span></p>
     <p class="mf-text" data-words data-en="Most brands hire one agency to think, a second to film, and a third to throw the party — then wonder why it all feels like three different brands. We put the writers, the camera crew and the stage managers in one building. One brief goes in. One story comes out: on screen, on stage, and in the room." data-ar="أغلب العلامات تتعامل مع وكالة للأفكار، وثانية للتصوير، وثالثة للحفل — ثم تستغرب لماذا تبدو كثلاث علامات مختلفة. نحن جمعنا الكتّاب وفريق التصوير ومديري المسرح في مبنى واحد. موجز واحد يدخل، وقصة واحدة تخرج: على الشاشة، وعلى المسرح، وفي القاعة.">Most brands hire one agency to think, a second to film, and a third to throw the party — then wonder why it all feels like three different brands. We put the writers, the camera crew and the stage managers in one building. One brief goes in. One story comes out: on screen, on stage, and in the room.</p>
@@ -125,8 +139,8 @@
 <section class="sec depts-sec" id="departments">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r><span data-en="Three departments.&lt;br&gt;&lt;em&gt;One call sheet.&lt;/em&gt;" data-ar="ثلاثة أقسام.&lt;br&gt;&lt;em&gt;جدول تصوير واحد.&lt;/em&gt;" data-html>Three departments.<br><em>One call sheet.</em></span></h2>
-      <p class="sec-side" data-r><span data-en="Hover a door. Every department can run a job alone — they are better when the same brief runs through all three." data-ar="مرّر على أي باب. كل قسم يقدر يشتغل لوحده — لكن النتيجة أقوى لما يمرّ نفس الموجز على الثلاثة.">Hover a door. Every department can run a job alone — they are better when the same brief runs through all three.</span></p>
+      <h2 class="h2" data-r><span data-en="Three departments. &lt;b&gt;One call sheet.&lt;/b&gt;" data-ar="ثلاثة أقسام. &lt;b&gt;جدول واحد.&lt;/b&gt;" data-html>Three departments. <b>One call sheet.</b></span></h2>
+      <p class="sec-side" data-r><span data-en="Hover a door. Every department can run a job alone — they are better when the same brief runs through all three." data-ar="مرّر على أي باب. كل قسم قادر على تنفيذ المشروع وحده — لكن النتيجة أقوى عندما يمرّ الموجز نفسه على الأقسام الثلاثة.">Hover a door. Every department can run a job alone — they are better when the same brief runs through all three.</span></p>
     </div>
 
     <div class="depts">
@@ -138,7 +152,7 @@
         <div class="dept-top"><i>01</i><span class="dept-go"><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
         <div class="dept-body">
           <h3><span data-en="Creative" data-ar="الإبداع">Creative</span></h3>
-          <p><span data-en="Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft." data-ar="هوية العلامة، أفكار الحملات، المحتوى، السوشيال والعلاقات العامة — مكتوبة بالعربي والإنجليزي من أول مسودة.">Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft.</span></p>
+          <p><span data-en="Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft." data-ar="هوية العلامة، أفكار الحملات، المحتوى، السوشيال ميديا والعلاقات العامة — بالعربية والإنجليزية من أول مسودة.">Brand identity, campaign ideas, content, social and PR — written in Arabic and English from the first draft.</span></p>
           <ul><li><span data-en="Brand" data-ar="الهوية">Brand</span></li><li><span data-en="Campaigns" data-ar="الحملات">Campaigns</span></li><li><span data-en="Content" data-ar="المحتوى">Content</span></li><li><span data-en="Social" data-ar="السوشيال">Social</span></li><li><span data-en="PR" data-ar="العلاقات العامة">PR</span></li></ul>
         </div>
       </a>
@@ -146,18 +160,18 @@
       <a class="dept dept-production" href="production.html" data-cursor="Roll">
         <div class="dept-art" aria-hidden="true">
           <svg class="clap" viewBox="0 0 200 160">
-            <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#F3F0E8"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#0A0A0C"/></g>
-            <rect x="10" y="54" width="180" height="96" rx="4" fill="#0A0A0C" stroke="#F3F0E8" stroke-width="3"/>
-            <path d="M10 66h180M28 54v12M70 54v12M112 54v12M154 54v12" stroke="#F3F0E8" stroke-width="2"/>
-            <text x="22" y="92" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="11">PROD  BUNDLE</text>
-            <text x="22" y="112" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="11">SCENE 01   TAKE 07</text>
-            <text x="22" y="132" fill="#FFD400" font-family="JetBrains Mono, monospace" font-size="11">ROLL A004</text>
+            <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#F6F1E4"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#12152B"/></g>
+            <rect x="10" y="54" width="180" height="96" rx="4" fill="#12152B" stroke="#F6F1E4" stroke-width="3"/>
+            <path d="M10 66h180M28 54v12M70 54v12M112 54v12M154 54v12" stroke="#F6F1E4" stroke-width="2"/>
+            <text x="22" y="92" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="11">PROD  BUNDLE</text>
+            <text x="22" y="112" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="11">SCENE 01   TAKE 07</text>
+            <text x="22" y="132" fill="#FCD535" font-family="JetBrains Mono, monospace" font-size="11">ROLL A004</text>
           </svg>
         </div>
         <div class="dept-top"><i>02</i><span class="dept-go"><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
         <div class="dept-body">
           <h3><span data-en="Production" data-ar="الإنتاج">Production</span></h3>
-          <p><span data-en="TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house." data-ar="إعلانات تلفزيونية، أفلام علامات، مقاطع سوشيال، تصوير فوتوغرافي وموشن — نكتبها ونصوّرها وننهيها داخلياً.">TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house.</span></p>
+          <p><span data-en="TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house." data-ar="إعلانات تلفزيونية، أفلام للعلامات، مقاطع للسوشيال ميديا، تصوير فوتوغرافي وموشن — نكتبها ونصوّرها وننهيها داخلياً.">TVCs, brand films, social cut-downs, photography and motion — scripted, shot and finished in-house.</span></p>
           <ul><li><span data-en="Film" data-ar="أفلام">Film</span></li><li><span data-en="Photo" data-ar="تصوير">Photo</span></li><li><span data-en="Motion" data-ar="موشن">Motion</span></li><li><span data-en="Post" data-ar="مونتاج">Post</span></li><li><span data-en="Live" data-ar="بث مباشر">Live</span></li></ul>
         </div>
       </a>
@@ -170,7 +184,7 @@
         <div class="dept-top"><i>03</i><span class="dept-go"><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
         <div class="dept-body">
           <h3><span data-en="Events" data-ar="الفعاليات">Events</span></h3>
-          <p><span data-en="Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night." data-ar="إطلاقات، تفعيلات في المولات، معارض وأيام إعلامية — من الفكرة والتنفيذ وجدول الحفل إلى الفريق في ليلة الحدث.">Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night.</span></p>
+          <p><span data-en="Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night." data-ar="إطلاقات، تفعيلات في المولات، معارض وأيام إعلامية — من الفكرة والتنفيذ وجدول الحفل حتى الفريق في ليلة الحدث.">Launches, mall activations, exhibitions and press days — concept, build, run-of-show and the crew on the night.</span></p>
           <ul><li><span data-en="Launches" data-ar="إطلاقات">Launches</span></li><li><span data-en="Activations" data-ar="تفعيلات">Activations</span></li><li><span data-en="Exhibitions" data-ar="معارض">Exhibitions</span></li><li><span data-en="Press days" data-ar="أيام إعلامية">Press days</span></li><li><span data-en="Pop-ups" data-ar="متاجر مؤقتة">Pop-ups</span></li></ul>
         </div>
       </a>
@@ -178,11 +192,152 @@
   </div>
 </section>
 
-<!-- ============ REEL ============ -->
+<!-- ============ FILMS — pinned horizontal reel ============ -->
+<section class="films-sec" id="films">
+  <div class="films-pin">
+    
+  <div class="geo " aria-hidden="true">
+    <i class="geo-sun" data-speed="-0.12"></i>
+    <i class="geo-dot" data-speed="0.25"></i>
+    <svg class="geo-arc" data-speed="0.08" viewBox="0 0 400 400"><circle cx="200" cy="200" r="196" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="22 10 3 10"/></svg>
+  </div>
+    <div class="films-head wrap">
+      <p class="eyebrow"><span data-en="Now showing" data-ar="يُعرض الآن">Now showing</span></p>
+      <h2 class="h2 films-h"><span data-en="Bigger &lt;b&gt;work.&lt;/b&gt;" data-ar="شغل &lt;b&gt;أكبر.&lt;/b&gt;" data-html>Bigger <b>work.</b></span></h2>
+      <p class="films-sub"><span data-en="Real films from the Bundle floor. Hover to preview, click to play." data-ar="أفلام حقيقية من استوديو Bundle. مرّر للمعاينة، واضغط للتشغيل.">Real films from the Bundle floor. Hover to preview, click to play.</span></p>
+    </div>
+    <div class="films-track" data-hscroll>
+      
+      <article class="film film-v" data-film="assets/video/rr-desert.mp4" data-orient="v" data-cursor="Play" tabindex="0" role="button" aria-label="Play Rolls-Royce Cullinan">
+        <div class="film-media">
+          <img src="assets/frames/rr-desert.jpg" alt="Rolls-Royce Cullinan" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-rr-desert.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">01</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Production" data-ar="الإنتاج">Production</span></span>
+          <h3><span data-en="Rolls-Royce Cullinan" data-ar="رولز رويس كولينان">Rolls-Royce Cullinan</span></h3>
+          <p><span data-en="Desert shoot · behind the scenes" data-ar="تصوير في الصحراء · الكواليس">Desert shoot · behind the scenes</span></p>
+        </div>
+      </article>
+      <article class="film film-v" data-film="assets/video/events-reel.mp4" data-orient="v" data-cursor="Play" tabindex="0" role="button" aria-label="Play Launch nights">
+        <div class="film-media">
+          <img src="assets/frames/car-stage.jpg" alt="Launch nights" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-events-reel.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">02</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Events" data-ar="الفعاليات">Events</span></span>
+          <h3><span data-en="Launch nights" data-ar="ليالي الإطلاق">Launch nights</span></h3>
+          <p><span data-en="Rolls-Royce · Shell Helix · Level Up" data-ar="رولز رويس · شل هيلكس · Level Up">Rolls-Royce · Shell Helix · Level Up</span></p>
+        </div>
+      </article>
+      <article class="film film-l" data-film="assets/video/hayatt.mp4" data-orient="l" data-cursor="Play" tabindex="0" role="button" aria-label="Play Hayatt — “Their presence completes us”">
+        <div class="film-media">
+          <img src="assets/frames/hayatt.jpg" alt="Hayatt — “Their presence completes us”" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-hayatt.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">03</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Creative" data-ar="الإبداع">Creative</span></span>
+          <h3><span data-en="Hayatt — “Their presence completes us”" data-ar="حياة — «وجودهم يكمّلنا»">Hayatt — “Their presence completes us”</span></h3>
+          <p><span data-en="Campaign film &amp; teaser" data-ar="فيلم الحملة والتيزر">Campaign film & teaser</span></p>
+        </div>
+      </article>
+      <article class="film film-v" data-film="assets/video/alghanim.mp4" data-orient="v" data-cursor="Play" tabindex="0" role="button" aria-label="Play Ali Alghanim &amp; Sons Automotive">
+        <div class="film-media">
+          <img src="assets/frames/alghanim-stand.jpg" alt="Ali Alghanim &amp; Sons Automotive" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-alghanim.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">04</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Events" data-ar="الفعاليات">Events</span></span>
+          <h3><span data-en="Ali Alghanim &amp; Sons Automotive" data-ar="علي الغانم وأولاده للسيارات">Ali Alghanim & Sons Automotive</span></h3>
+          <p><span data-en="Mall stand · Alghanim Parts" data-ar="جناح في المول · الغانم للقطع">Mall stand · Alghanim Parts</span></p>
+        </div>
+      </article>
+      <article class="film film-l" data-film="assets/video/argan.mp4" data-orient="l" data-cursor="Play" tabindex="0" role="button" aria-label="Play Argan Bedaya">
+        <div class="film-media">
+          <img src="assets/frames/argan.jpg" alt="Argan Bedaya" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-argan.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">05</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Production" data-ar="الإنتاج">Production</span></span>
+          <h3><span data-en="Argan Bedaya" data-ar="أرجان بداية">Argan Bedaya</span></h3>
+          <p><span data-en="Brand film" data-ar="فيلم العلامة">Brand film</span></p>
+        </div>
+      </article>
+      <article class="film film-v" data-film="assets/video/makes-bundle.mp4" data-orient="v" data-cursor="Play" tabindex="0" role="button" aria-label="Play What makes a Bundle?">
+        <div class="film-media">
+          <img src="assets/frames/makes-bundle.jpg" alt="What makes a Bundle?" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-makes-bundle.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">06</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Creative" data-ar="الإبداع">Creative</span></span>
+          <h3><span data-en="What makes a Bundle?" data-ar="ما الذي يصنع Bundle؟">What makes a Bundle?</span></h3>
+          <p><span data-en="Agency motion piece" data-ar="موشن جرافيك للوكالة">Agency motion piece</span></p>
+        </div>
+      </article>
+      <article class="film film-l" data-film="assets/video/year-2024.mp4" data-orient="l" data-cursor="Play" tabindex="0" role="button" aria-label="Play 2024, on screen">
+        <div class="film-media">
+          <img src="assets/frames/year-geely.jpg" alt="2024, on screen" loading="lazy">
+          <video muted loop playsinline preload="none" data-prev="assets/video/prev-year-2024.mp4"></video>
+          <span class="film-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg></span>
+          <span class="film-no">07</span>
+        </div>
+        <div class="film-cap">
+          <span class="film-dept"><span data-en="Production" data-ar="الإنتاج">Production</span></span>
+          <h3><span data-en="2024, on screen" data-ar="٢٠٢٤ على الشاشة">2024, on screen</span></h3>
+          <p><span data-en="Year-in-review reel" data-ar="ريل حصاد السنة">Year-in-review reel</span></p>
+        </div>
+      </article>
+      <a class="film-more" href="work.html" data-cursor="All">
+        <span><span data-en="All the &lt;b&gt;work&lt;/b&gt;" data-ar="كل &lt;b&gt;الأعمال&lt;/b&gt;" data-html>All the <b>work</b></span></span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE BUNDLE SHOW (circus) ============ -->
+<section class="show">
+  <div class="show-bg" aria-hidden="true">
+    <i class="show-blob b1" data-speed="0.18"></i><i class="show-blob b2" data-speed="-0.12"></i><i class="show-dots" data-speed="0.3"></i>
+  </div>
+  <div class="wrap show-in">
+    <div class="show-copy">
+      <p class="eyebrow" data-r><span data-en="The Bundle show" data-ar="عرض Bundle">The Bundle show</span></p>
+      <h2 class="h2" data-r><span data-en="It takes a circus &lt;b&gt;to pull off a launch.&lt;/b&gt;" data-ar="إطلاق ناجح &lt;b&gt;يحتاج سيركاً كاملاً.&lt;/b&gt;" data-html>It takes a circus <b>to pull off a launch.</b></span></h2>
+      <p class="sec-side" data-r><span data-en="Magicians, acrobats, a ringmaster and someone juggling the clock. Ours happens to run on a call sheet — so the magic shows up on time." data-ar="سحرة، بهلوانات، مدير حلبة، وشخص يلاعب الوقت. سيركنا يمشي على جدول دقيق — فيصل السحر في موعده.">Magicians, acrobats, a ringmaster and someone juggling the clock. Ours happens to run on a call sheet — so the magic shows up on time.</span></p>
+      <div class="show-acts" data-r>
+        <span><span data-en="Ideas" data-ar="أفكار">Ideas</span></span><span><span data-en="Film" data-ar="أفلام">Film</span></span><span><span data-en="Stage" data-ar="مسرح">Stage</span></span><span><span data-en="PR" data-ar="إعلام">PR</span></span>
+      </div>
+    </div>
+    <div class="show-art" data-tilt>
+      <img src="assets/brand/circus.webp" alt="Illustrated cast of performers: a card trick, a magician pulling a rabbit, a unicyclist, parachutists and a ringmaster holding a broken clock" width="762" height="830" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
+<section class="sband" aria-label="Where integration happens.">
+  <div class="sband-edge" aria-hidden="true"></div>
+  <p class="sband-text" data-r><span data-en="Where integration happens." data-ar="حيث يحدث التكامل.">Where integration happens.</span></p>
+  <div class="sband-edge" aria-hidden="true"></div>
+</section>
+
+<!-- ============ REEL STRIP ============ -->
 <section class="sec reel-sec" id="reel">
   <div class="wrap sec-head">
-    <h2 class="h2" data-r><span data-en="Shot, built and run &lt;em&gt;by us.&lt;/em&gt;" data-ar="صوّرناها وبنيناها &lt;em&gt;وأدرناها بأنفسنا.&lt;/em&gt;" data-html>Shot, built and run <em>by us.</em></span></h2>
-    <p class="sec-side" data-r><span data-en="Frames from recent launches, shoots and set builds. No stock, no hand-offs — the crew that pitched it is the crew that shot it." data-ar="لقطات من إطلاقات وتصويرات وبناء مواقع حديثة. لا صور جاهزة ولا تسليم بين شركات — الفريق الذي قدّم الفكرة هو من صوّرها.">Frames from recent launches, shoots and set builds. No stock, no hand-offs — the crew that pitched it is the crew that shot it.</span></p>
+    <h2 class="h2" data-r><span data-en="Shot, built and run &lt;b&gt;by us.&lt;/b&gt;" data-ar="صوّرناها وبنيناها &lt;b&gt;وأدرناها بأنفسنا.&lt;/b&gt;" data-html>Shot, built and run <b>by us.</b></span></h2>
+    <p class="sec-side" data-r><span data-en="Frames from our own sets — launch nights, mall stands and a Rolls-Royce in the desert at golden hour. No stock, no hand-offs." data-ar="لقطات من مواقع تصويرنا — ليالي إطلاق، أجنحة في المولات، ورولز رويس في الصحراء وقت الغروب. لا صور جاهزة ولا وسطاء.">Frames from our own sets — launch nights, mall stands and a Rolls-Royce in the desert at golden hour. No stock, no hand-offs.</span></p>
   </div>
   
   <div class="strip" aria-label="Production stills">
@@ -190,59 +345,106 @@
       <div class="strip-set">
       <figure class="frame">
         <span class="frame-no">0012</span>
-        <img src="assets/work/geely-starray.png" alt="Geely Starray — mall launch stand" width="233" height="435" loading="lazy">
-        <figcaption><b>EVENTS</b><span data-en="Geely Starray — mall launch stand" data-ar="جيلي ستاري — منصة إطلاق في المول">Geely Starray — mall launch stand</span></figcaption>
+        <img src="assets/frames/rr-desert.jpg" alt="Rolls-Royce Cullinan — desert shoot" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="Rolls-Royce Cullinan — desert shoot" data-ar="رولز رويس كولينان — تصوير في الصحراء">Rolls-Royce Cullinan — desert shoot</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0019</span>
-        <img src="assets/work/interview-set.png" alt="Branded interview set" width="194" height="387" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Branded interview set" data-ar="استوديو مقابلات بهوية العلامة">Branded interview set</span></figcaption>
+        <img src="assets/frames/car-stage.jpg" alt="Reveal stage, overhead" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Reveal stage, overhead" data-ar="منصة الكشف من الأعلى">Reveal stage, overhead</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0026</span>
-        <img src="assets/work/gmc-yukon.png" alt="Location shoot — full-size SUV" width="206" height="339" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Location shoot — full-size SUV" data-ar="تصوير خارجي — سيارة دفع رباعي">Location shoot — full-size SUV</span></figcaption>
+        <img src="assets/frames/alghanim-stand.jpg" alt="Ali Alghanim &amp; Sons — mall stand" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Ali Alghanim &amp; Sons — mall stand" data-ar="علي الغانم وأولاده — جناح المول">Ali Alghanim & Sons — mall stand</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0033</span>
-        <img src="assets/work/sports-shoot.png" alt="Gelled studio portrait" width="206" height="339" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Gelled studio portrait" data-ar="جلسة تصوير بإضاءة ملوّنة">Gelled studio portrait</span></figcaption>
+        <img src="assets/frames/dj.jpg" alt="Launch night, DJ booth" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Launch night, DJ booth" data-ar="ليلة إطلاق، منصة الـ DJ">Launch night, DJ booth</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0040</span>
-        <img src="assets/work/be-epic.png" alt="Fitness brand film — on location" width="194" height="387" loading="lazy">
-        <figcaption><b>CREATIVE</b><span data-en="Fitness brand film — on location" data-ar="فيلم علامة رياضية — تصوير خارجي">Fitness brand film — on location</span></figcaption>
+        <img src="assets/frames/rr-camera.jpg" alt="A-cam on the dunes" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="A-cam on the dunes" data-ar="الكاميرا على الكثبان">A-cam on the dunes</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0047</span>
+        <img src="assets/frames/levelup.jpg" alt="Level Up — brand night" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Level Up — brand night" data-ar="Level Up — ليلة العلامة">Level Up — brand night</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0054</span>
+        <img src="assets/frames/rr-gala.jpg" alt="Rolls-Royce gala dinner" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Rolls-Royce gala dinner" data-ar="عشاء رولز رويس">Rolls-Royce gala dinner</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0061</span>
+        <img src="assets/frames/alghanim-guests.jpg" alt="Opening-day guests" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Opening-day guests" data-ar="ضيوف يوم الافتتاح">Opening-day guests</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0068</span>
+        <img src="assets/frames/shell-helix.jpg" alt="Shell Helix — dealer event" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Shell Helix — dealer event" data-ar="شل هيلكس — فعالية الوكلاء">Shell Helix — dealer event</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0075</span>
+        <img src="assets/frames/rr-crew.jpg" alt="Crew call at golden hour" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="Crew call at golden hour" data-ar="الطاقم وقت الغروب">Crew call at golden hour</span></figcaption>
       </figure></div>
       <div class="strip-set" aria-hidden="true">
       <figure class="frame">
         <span class="frame-no">0012</span>
-        <img src="assets/work/geely-starray.png" alt="Geely Starray — mall launch stand" width="233" height="435" loading="lazy">
-        <figcaption><b>EVENTS</b><span data-en="Geely Starray — mall launch stand" data-ar="جيلي ستاري — منصة إطلاق في المول">Geely Starray — mall launch stand</span></figcaption>
+        <img src="assets/frames/rr-desert.jpg" alt="Rolls-Royce Cullinan — desert shoot" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="Rolls-Royce Cullinan — desert shoot" data-ar="رولز رويس كولينان — تصوير في الصحراء">Rolls-Royce Cullinan — desert shoot</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0019</span>
-        <img src="assets/work/interview-set.png" alt="Branded interview set" width="194" height="387" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Branded interview set" data-ar="استوديو مقابلات بهوية العلامة">Branded interview set</span></figcaption>
+        <img src="assets/frames/car-stage.jpg" alt="Reveal stage, overhead" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Reveal stage, overhead" data-ar="منصة الكشف من الأعلى">Reveal stage, overhead</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0026</span>
-        <img src="assets/work/gmc-yukon.png" alt="Location shoot — full-size SUV" width="206" height="339" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Location shoot — full-size SUV" data-ar="تصوير خارجي — سيارة دفع رباعي">Location shoot — full-size SUV</span></figcaption>
+        <img src="assets/frames/alghanim-stand.jpg" alt="Ali Alghanim &amp; Sons — mall stand" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Ali Alghanim &amp; Sons — mall stand" data-ar="علي الغانم وأولاده — جناح المول">Ali Alghanim & Sons — mall stand</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0033</span>
-        <img src="assets/work/sports-shoot.png" alt="Gelled studio portrait" width="206" height="339" loading="lazy">
-        <figcaption><b>PRODUCTION</b><span data-en="Gelled studio portrait" data-ar="جلسة تصوير بإضاءة ملوّنة">Gelled studio portrait</span></figcaption>
+        <img src="assets/frames/dj.jpg" alt="Launch night, DJ booth" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Launch night, DJ booth" data-ar="ليلة إطلاق، منصة الـ DJ">Launch night, DJ booth</span></figcaption>
       </figure>
       <figure class="frame">
         <span class="frame-no">0040</span>
-        <img src="assets/work/be-epic.png" alt="Fitness brand film — on location" width="194" height="387" loading="lazy">
-        <figcaption><b>CREATIVE</b><span data-en="Fitness brand film — on location" data-ar="فيلم علامة رياضية — تصوير خارجي">Fitness brand film — on location</span></figcaption>
+        <img src="assets/frames/rr-camera.jpg" alt="A-cam on the dunes" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="A-cam on the dunes" data-ar="الكاميرا على الكثبان">A-cam on the dunes</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0047</span>
+        <img src="assets/frames/levelup.jpg" alt="Level Up — brand night" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Level Up — brand night" data-ar="Level Up — ليلة العلامة">Level Up — brand night</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0054</span>
+        <img src="assets/frames/rr-gala.jpg" alt="Rolls-Royce gala dinner" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Rolls-Royce gala dinner" data-ar="عشاء رولز رويس">Rolls-Royce gala dinner</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0061</span>
+        <img src="assets/frames/alghanim-guests.jpg" alt="Opening-day guests" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Opening-day guests" data-ar="ضيوف يوم الافتتاح">Opening-day guests</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0068</span>
+        <img src="assets/frames/shell-helix.jpg" alt="Shell Helix — dealer event" width="540" height="960" loading="lazy">
+        <figcaption><b>EVENTS</b><span data-en="Shell Helix — dealer event" data-ar="شل هيلكس — فعالية الوكلاء">Shell Helix — dealer event</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <span class="frame-no">0075</span>
+        <img src="assets/frames/rr-crew.jpg" alt="Crew call at golden hour" width="540" height="960" loading="lazy">
+        <figcaption><b>PRODUCTION</b><span data-en="Crew call at golden hour" data-ar="الطاقم وقت الغروب">Crew call at golden hour</span></figcaption>
       </figure></div>
     </div>
-  </div>
-  <div class="wrap reel-foot">
-    <a class="btn btn-ghost" href="work.html"><span data-en="See the work" data-ar="شاهد الأعمال">See the work</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
@@ -250,8 +452,8 @@
 <section class="sec light ros-sec">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" data-r><span data-en="How a job runs. &lt;em&gt;Call times included.&lt;/em&gt;" data-ar="كيف يمشي المشروع. &lt;em&gt;بالمواعيد.&lt;/em&gt;" data-html>How a job runs. <em>Call times included.</em></span></h2>
-      <p class="sec-side" data-r><span data-en="Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next." data-ar="كل مشروع عندنا يمشي على جدول تصوير — نفس الوثيقة التي يعيش عليها أي موقع تصوير. تعرف دائماً ما يحدث اليوم وما القادم.">Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next.</span></p>
+      <h2 class="h2" data-r><span data-en="How a job runs. &lt;b&gt;Call times included.&lt;/b&gt;" data-ar="كيف يسير المشروع. &lt;b&gt;بالمواعيد.&lt;/b&gt;" data-html>How a job runs. <b>Call times included.</b></span></h2>
+      <p class="sec-side" data-r><span data-en="Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next." data-ar="كل مشروع عندنا يسير على جدول تصوير — الوثيقة نفسها التي يعمل بها أي موقع تصوير. تعرف دائماً ما يحدث اليوم وما القادم.">Every Bundle project runs on a call sheet — the same document a film set lives by. You always know what happens today and what lands next.</span></p>
     </div>
 
     <div class="callsheet" data-r>
@@ -269,25 +471,25 @@
         <span class="cs-time" dir="ltr">11:30</span>
         <span class="cs-no">02</span>
         <h3><span data-en="The big idea" data-ar="الفكرة الكبيرة">The big idea</span></h3>
-        <p><span data-en="One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it." data-ar="فكرة واحدة مصمّمة لتعيش على الشاشة وعلى المسرح وفي الفيد في نفس الوقت — ومعها توزيع الميزانية.">One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it.</span></p>
+        <p><span data-en="One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it." data-ar="فكرة واحدة مصمّمة لتعيش على الشاشة وعلى المسرح وفي المنصات في الوقت نفسه — ومعها توزيع الميزانية.">One idea built to live on screen, on stage and on the feed at the same time — with the budget split mapped beside it.</span></p>
       </div>
       <div class="cs-row" data-r>
         <span class="cs-time" dir="ltr">14:00</span>
         <span class="cs-no">03</span>
         <h3><span data-en="Pre-production" data-ar="ما قبل الإنتاج">Pre-production</span></h3>
-        <p><span data-en="Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls." data-ar="سيناريو، ستوري بورد، مواقع، تصاريح، اختيار ممثلين، ورسومات التنفيذ. كل شيء معتمد قبل ما تدور الكاميرا.">Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls.</span></p>
+        <p><span data-en="Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls." data-ar="سيناريو، ستوري بورد، مواقع، تصاريح، اختيار الممثلين، ورسومات التنفيذ. كل شيء معتمد قبل أن تدور الكاميرا.">Scripts, storyboards, venues, permits, casting, fabrication drawings. Everything signed off before a camera rolls.</span></p>
       </div>
       <div class="cs-row" data-r>
         <span class="cs-time" dir="ltr">19:00</span>
         <span class="cs-no">04</span>
         <h3><span data-en="Showtime" data-ar="وقت العرض">Showtime</span></h3>
-        <p><span data-en="Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox." data-ar="يوم التصوير أو ليلة الإطلاق أو انطلاق الحملة. فريقنا في الموقع وعلى المسرح وعلى رسائل الجمهور.">Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox.</span></p>
+        <p><span data-en="Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox." data-ar="يوم التصوير أو ليلة الإطلاق أو انطلاق الحملة. فريقنا في الموقع وعلى المسرح وفي الرد على الجمهور.">Shoot day, launch night or campaign live. Our crew on set, on stage and on the community inbox.</span></p>
       </div>
       <div class="cs-row" data-r>
         <span class="cs-time" dir="ltr">23:59</span>
         <span class="cs-no">05</span>
         <h3><span data-en="That's a wrap" data-ar="انتهى التصوير">That's a wrap</span></h3>
-        <p><span data-en="Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00." data-ar="ملخص في نفس الليلة، ملف إعلامي في اليوم التالي، وتقرير مقابل المؤشر الذي اتفقنا عليه الساعة ٩:٠٠.">Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00.</span></p>
+        <p><span data-en="Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00." data-ar="ملخص في الليلة نفسها، ملف إعلامي في اليوم التالي، وتقرير مقابل المؤشر الذي اتفقنا عليه الساعة ٩:٠٠.">Same-night highlights, next-day press pack, and a report against the metric we agreed at 09:00.</span></p>
       </div>
     </div>
   </div>
@@ -298,8 +500,8 @@
   <div class="wrap credits-grid">
     <div>
       <p class="eyebrow" data-r><span data-en="Starring" data-ar="بطولة">Starring</span></p>
-      <h2 class="h2" data-r><span data-en="30+ brands &lt;em&gt;in the credits.&lt;/em&gt;" data-ar="أكثر من ٣٠ علامة &lt;em&gt;في التترات.&lt;/em&gt;" data-html>30+ brands <em>in the credits.</em></span></h2>
-      <p class="sec-side" data-r><span data-en="From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew." data-ar="من الطاقة الوطنية إلى السيارات العالمية والأزياء الفاخرة. قاعات مختلفة وجهات تنظيمية مختلفة — نفس الفريق.">From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew.</span></p>
+      <h2 class="h2" data-r><span data-en="30+ brands &lt;b&gt;in the credits.&lt;/b&gt;" data-ar="أكثر من ٣٠ علامة &lt;b&gt;في التترات.&lt;/b&gt;" data-html>30+ brands <b>in the credits.</b></span></h2>
+      <p class="sec-side" data-r><span data-en="From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew." data-ar="من الطاقة الوطنية إلى السيارات العالمية والأزياء الفاخرة. قاعات مختلفة وجهات تنظيمية مختلفة — والفريق نفسه.">From national energy to global automotive and luxury fashion. Different rooms, different regulators — same crew.</span></p>
       <a class="btn btn-ghost" href="work.html"><span data-en="The client list" data-ar="قائمة العملاء">The client list</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="credits" aria-label="Clients">
@@ -311,7 +513,7 @@
         </div>
         <div class="cr-group">
           <p class="cr-role" data-en="Automotive" data-ar="السيارات">Automotive</p>
-          <p class="cr-name">BMW</p><p class="cr-name">Porsche</p><p class="cr-name">Cadillac</p><p class="cr-name">Volvo</p><p class="cr-name">Geely</p><p class="cr-name">Haval</p><p class="cr-name">GWM Tank</p><p class="cr-name">Ali Alghanim & Sons</p>
+          <p class="cr-name">Rolls-Royce</p><p class="cr-name">BMW</p><p class="cr-name">Porsche</p><p class="cr-name">Cadillac</p><p class="cr-name">Volvo</p><p class="cr-name">Geely</p><p class="cr-name">Haval</p><p class="cr-name">GWM Tank</p><p class="cr-name">Ali Alghanim & Sons</p>
         </div>
         <div class="cr-group">
           <p class="cr-role" data-en="Fashion &amp; Luxury" data-ar="الأزياء والفخامة">Fashion & Luxury</p>
@@ -326,14 +528,14 @@
           <p class="cr-name">KISR</p><p class="cr-name">The National Fund</p><p class="cr-name">Markaz</p><p class="cr-name">Australian University Kuwait</p>
         </div>
         <div class="cr-group">
-          <p class="cr-role" data-en="Health" data-ar="الصحة">Health</p>
+          <p class="cr-role" data-en="Health &amp; Community" data-ar="الصحة والمجتمع">Health & Community</p>
           <p class="cr-name">Roche</p><p class="cr-name">Hayatt</p><p class="cr-name">Argan</p>
         </div>
         <div class="cr-group">
           <p class="cr-role" data-en="FMCG &amp; Services" data-ar="السلع والخدمات">FMCG & Services</p>
           <p class="cr-name">Kitco</p><p class="cr-name">Sara</p><p class="cr-name">Aqua Gulf</p><p class="cr-name">Alnasser</p><p class="cr-name">gig Kuwait</p><p class="cr-name">Cartoon Network</p>
         </div>
-        <div class="cr-group cr-end"><p class="cr-role"><span data-en="Produced by" data-ar="إنتاج">Produced by</span></p><p class="cr-name cr-logo"><img src="assets/logo-yellow-bundle.png" alt="Bundle" width="120" height="34"></p></div>
+        <div class="cr-group cr-end"><p class="cr-role"><span data-en="Produced by" data-ar="إنتاج">Produced by</span></p><p class="cr-name cr-logo"><img src="assets/brand/logo-tag.png" alt="Bundle" width="200" height="100"></p></div>
       </div>
     </div>
   </div>
@@ -342,7 +544,7 @@
 <!-- ============ FACTS ============ -->
 <section class="facts">
   <div class="wrap facts-row">
-    <div class="fact" data-r><b>2019</b><span data-en="Doors opened in Kuwait" data-ar="افتتحنا في الكويت">Doors opened in Kuwait</span></div>
+    <div class="fact" data-r><b>2019</b><span data-en="Doors opened in Kuwait" data-ar="بدأنا في الكويت">Doors opened in Kuwait</span></div>
     <div class="fact" data-r><b><span data-count="30">30</span>+</b><span data-en="Brands in the credits" data-ar="علامة في التترات">Brands in the credits</span></div>
     <div class="fact" data-r><b>3<small>/1</small></b><span data-en="Departments, one building" data-ar="أقسام في مبنى واحد">Departments, one building</span></div>
     <div class="fact" data-r><b>AR<small>+</small>EN</b><span data-en="Written natively, never translated" data-ar="كتابة أصلية لا ترجمة">Written natively, never translated</span></div>
@@ -351,17 +553,18 @@
 
 <!-- ============ CTA ============ -->
 <section class="cta-scene">
+  <div class="cta-stripes" aria-hidden="true"></div>
   <div class="wrap cta-in">
     <svg class="cta-clap" viewBox="0 0 200 160" aria-hidden="true">
-      <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#0A0A0C"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#FFD400"/></g>
-      <rect x="10" y="54" width="180" height="96" rx="4" fill="#0A0A0C"/>
-      <text x="24" y="98" fill="#FFD400" font-family="JetBrains Mono, monospace" font-size="13">SCENE: YOURS</text>
-      <text x="24" y="122" fill="#F3F0E8" font-family="JetBrains Mono, monospace" font-size="13">TAKE 01</text>
+      <g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#12152B"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#FCD535"/></g>
+      <rect x="10" y="54" width="180" height="96" rx="4" fill="#12152B"/>
+      <text x="24" y="98" fill="#FCD535" font-family="JetBrains Mono, monospace" font-size="13">SCENE: YOURS</text>
+      <text x="24" y="122" fill="#F6F1E4" font-family="JetBrains Mono, monospace" font-size="13">TAKE 01</text>
     </svg>
     <h2 class="cta-h"><span data-en="Got a launch, a film&lt;br&gt;or a crazy idea?" data-ar="عندك إطلاق، فيلم&lt;br&gt;أو فكرة مجنونة؟" data-html>Got a launch, a film<br>or a crazy idea?</span></h2>
-    <p><span data-en="Send the brief. A producer calls you back within two working days." data-ar="أرسل الموجز. منتج من فريقنا يتصل بك خلال يومي عمل.">Send the brief. A producer calls you back within two working days.</span></p>
+    <p><span data-en="Send the brief. A producer calls you back within two working days." data-ar="أرسل الموجز، وسيتصل بك منتج من فريقنا خلال يومي عمل.">Send the brief. A producer calls you back within two working days.</span></p>
     <div class="hero-ctas">
-      <a class="btn btn-ink" href="contact.html"><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn-ink" href="contact.html" data-brief><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a class="btn btn-line" href="tel:+96597403924"><span dir="ltr">+965 9740 3924</span></a>
     </div>
   </div>
@@ -370,13 +573,13 @@
 </main>
 
 <footer class="ftr">
-  <a class="ftr-roll" href="contact.html" aria-label="Brief us">
+  <a class="ftr-roll" href="contact.html" data-brief aria-label="Brief us">
     <div class="ftr-track"><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg></div>
     <div class="ftr-track" aria-hidden="true"><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg><span><span data-en="Let's make a scene" data-ar="خلّنا نصنع مشهد">Let's make a scene</span></span><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg></div>
   </a>
   <div class="wrap ftr-grid">
     <div class="ftr-brand">
-      <img src="assets/logo-yellow-bundle.png" alt="Bundle" width="140" height="39">
+      <img src="assets/brand/logo-tag.png" alt="Bundle — Where Integration Happens" width="200" height="100">
       <p><span data-en="Creative, production and events — one building, one crew, Kuwait. Est. 2019." data-ar="إبداع وإنتاج وفعاليات — مبنى واحد وفريق واحد، الكويت. منذ ٢٠١٩.">Creative, production and events — one building, one crew, Kuwait. Est. 2019.</span></p>
     </div>
     <div class="ftr-col">
@@ -389,7 +592,7 @@
       <p class="eyebrow"><span data-en="Studio" data-ar="الاستوديو">Studio</span></p>
       <a href="work.html"><span data-en="Work" data-ar="أعمالنا">Work</span></a>
       <a href="about.html"><span data-en="About" data-ar="من نحن">About</span></a>
-      <a href="contact.html"><span data-en="Brief us" data-ar="أرسل فكرتك">Brief us</span></a>
+      <a href="contact.html"><span data-en="Contact" data-ar="تواصل معنا">Contact</span></a>
     </div>
     <div class="ftr-col">
       <p class="eyebrow"><span data-en="Call sheet" data-ar="بيانات التواصل">Call sheet</span></p>
@@ -407,9 +610,76 @@
   <div class="wrap ftr-base">
     <span>© <span data-year>2026</span> Bundle IMS · <span data-en="Kuwait" data-ar="الكويت">Kuwait</span></span>
     <span class="ftr-tc" aria-hidden="true"><i class="rec-dot"></i> <span data-tc>00:00:00:00</span></span>
-    <a href="#top" class="ftr-top"><span data-en="Rewind to top" data-ar="ارجع للبداية">Rewind to top</span> ↑</a>
+    <a href="#top" class="ftr-top"><span data-en="Rewind to top ↑" data-ar="العودة للأعلى ↑">Rewind to top ↑</span></a>
   </div>
 </footer>
-<script src="js/app.js"></script>
+
+<div class="bm" id="brief" role="dialog" aria-modal="true" aria-labelledby="bm-title" hidden>
+  <div class="bm-scrim" data-bm-close></div>
+  <div class="bm-panel">
+    <div class="bm-stripes" aria-hidden="true"></div>
+    <div class="bm-head">
+      <div>
+        <p class="eyebrow"><span data-en="Brief us — take" data-ar="أرسل فكرتك — لقطة">Brief us — take</span> <span dir="ltr"><b class="bm-take">1</b>/3</span></p>
+        <h2 id="bm-title" class="bm-title"><span data-en="Let's make a &lt;b&gt;scene.&lt;/b&gt;" data-ar="خلّنا نصنع &lt;b&gt;مشهد.&lt;/b&gt;" data-html>Let's make a <b>scene.</b></span></h2>
+      </div>
+      <button class="bm-x" type="button" data-bm-close aria-label="Close"><i></i><i></i></button>
+    </div>
+    <div class="bm-progress" aria-hidden="true"><i></i></div>
+    <form class="bm-form" novalidate>
+      <fieldset class="bm-step is-on" data-step="1">
+        <legend><span data-en="What do you need?" data-ar="ماذا تحتاج؟">What do you need?</span></legend>
+        <div class="pchips">
+          <label class="pchip"><input type="checkbox" name="dept" value="Creative"><span><span data-en="Creative" data-ar="الإبداع">Creative</span></span></label><label class="pchip"><input type="checkbox" name="dept" value="Production"><span><span data-en="Production" data-ar="الإنتاج">Production</span></span></label><label class="pchip"><input type="checkbox" name="dept" value="Events"><span><span data-en="Events" data-ar="الفعاليات">Events</span></span></label><label class="pchip"><input type="checkbox" name="dept" value="All three"><span><span data-en="All three" data-ar="الثلاثة معاً">All three</span></span></label>
+        </div>
+        <legend class="mt"><span data-en="When does it go live?" data-ar="متى الانطلاق؟">When does it go live?</span></legend>
+        <div class="pchips">
+          <label class="pchip"><input type="radio" name="when" value="This month"><span><span data-en="This month" data-ar="هذا الشهر">This month</span></span></label><label class="pchip"><input type="radio" name="when" value="1–3 months"><span><span data-en="1–3 months" data-ar="١–٣ أشهر">1–3 months</span></span></label><label class="pchip"><input type="radio" name="when" value="Later"><span><span data-en="Later" data-ar="لاحقاً">Later</span></span></label><label class="pchip"><input type="radio" name="when" value="Not sure"><span><span data-en="Not sure" data-ar="غير محدد">Not sure</span></span></label>
+        </div>
+        <p class="bm-err" data-err><span data-en="Pick at least one department." data-ar="اختر قسماً واحداً على الأقل.">Pick at least one department.</span></p>
+      </fieldset>
+      <fieldset class="bm-step" data-step="2">
+        <legend><span data-en="Tell us the story" data-ar="احكِ لنا القصة">Tell us the story</span></legend>
+        <div class="fld full">
+          <label for="bm-msg"><span data-en="The brief" data-ar="الموجز">The brief</span></label>
+          <textarea id="bm-msg" name="msg" required placeholder="What are you launching, who needs to see it, and what does success look like?" data-en-ph="What are you launching, who needs to see it, and what does success look like?" data-ar-ph="ماذا ستطلق، ومن يجب أن يراه، وكيف يبدو النجاح؟"></textarea>
+        </div>
+        <p class="bm-err" data-err><span data-en="A line or two is enough." data-ar="سطر أو سطران يكفيان.">A line or two is enough.</span></p>
+      </fieldset>
+      <fieldset class="bm-step" data-step="3">
+        <legend><span data-en="Who do we call back?" data-ar="بمن نتصل؟">Who do we call back?</span></legend>
+        <div class="bm-grid">
+          <div class="fld"><label for="bm-name"><span data-en="Your name" data-ar="اسمك">Your name</span></label><input id="bm-name" name="name" required autocomplete="name"></div>
+          <div class="fld"><label for="bm-co"><span data-en="Brand / company" data-ar="العلامة / الشركة">Brand / company</span></label><input id="bm-co" name="company" autocomplete="organization"></div>
+          <div class="fld"><label for="bm-mail"><span data-en="Email" data-ar="البريد الإلكتروني">Email</span></label><input id="bm-mail" name="email" type="email" required autocomplete="email"></div>
+          <div class="fld"><label for="bm-tel"><span data-en="Phone" data-ar="الهاتف">Phone</span></label><input id="bm-tel" name="phone" type="tel" autocomplete="tel" dir="ltr"></div>
+        </div>
+        <p class="bm-err" data-err><span data-en="Name and a valid email, please." data-ar="الاسم وبريد إلكتروني صحيح من فضلك.">Name and a valid email, please.</span></p>
+      </fieldset>
+      <div class="bm-step bm-done" data-step="4">
+        <svg class="bm-clap" viewBox="0 0 200 160" aria-hidden="true"><g class="clap-arm"><rect x="10" y="22" width="180" height="26" rx="3" fill="#FCD535"/><path d="M28 22l-14 26h22l14-26zM70 22l-14 26h22l14-26zM112 22l-14 26h22l14-26zM154 22l-14 26h22l14-26z" fill="#4D5C9E"/></g><rect x="10" y="54" width="180" height="96" rx="4" fill="#FCD535"/><text x="24" y="98" fill="#12152B" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">THAT'S A TAKE</text><text x="24" y="124" fill="#12152B" font-family="JetBrains Mono, monospace" font-size="12">SCENE 01 · ROLL A</text></svg>
+        <h3><span data-en="That's a take." data-ar="تم التصوير.">That's a take.</span></h3>
+        <p><span data-en="A producer will call you within two working days. Want to skip the queue?" data-ar="منتج من فريقنا سيتصل بك خلال يومي عمل. تريد أن تختصر الوقت؟">A producer will call you within two working days. Want to skip the queue?</span></p>
+        <a class="btn" href="https://wa.me/96597403924" target="_blank" rel="noopener" data-wa><span data-en="Send it on WhatsApp" data-ar="أرسله على واتساب">Send it on WhatsApp</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="bm-nav">
+        <button type="button" class="btn btn-ghost" data-bm-back><span data-en="Back" data-ar="رجوع">Back</span></button>
+        <button type="button" class="btn" data-bm-next><span data-en="Next take" data-ar="اللقطة التالية">Next take</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="submit" class="btn" data-bm-send><span data-en="Send the brief" data-ar="أرسل الموجز">Send the brief</span><svg class="ico-arr" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Film player" hidden>
+  <div class="lb-scrim" data-lb-close></div>
+  <div class="lb-frame">
+    <video controls playsinline preload="none"></video>
+    <button class="bm-x lb-x" type="button" data-lb-close aria-label="Close"><i></i><i></i></button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/app.js" defer></script>
 </body>
 </html>
