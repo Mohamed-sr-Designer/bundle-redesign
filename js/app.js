@@ -282,6 +282,16 @@
   });
   w.addEventListener('pageshow', function (e) { if (e.persisted && curtain) { curtain.classList.remove('is-in'); html.classList.remove('is-covered'); } });
 
+  /* ---------- 16b. Smooth in-page anchors (CSS smooth-scroll breaks ScrollTrigger) */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || a.hasAttribute('data-brief')) return;
+    var id = a.getAttribute('href'), el = id.length > 1 ? qs(id) : null;
+    if (!el && id !== '#top') return;
+    e.preventDefault();
+    w.scrollTo({ top: el ? el.getBoundingClientRect().top + w.scrollY : 0, behavior: reduced ? 'auto' : 'smooth' });
+  });
+
   /* ---------- 17. Brief popup ------------------------------------------- */
   var bm = qs('#brief'), lastFocus = null;
   if (bm) {

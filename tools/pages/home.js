@@ -155,28 +155,6 @@ const body = `
   </div>
 </section>
 
-<!-- ============ THE BUNDLE SHOW (circus) ============ -->
-<section class="show">
-  <div class="show-bg" aria-hidden="true">
-    <i class="show-blob b1" data-speed="0.18"></i><i class="show-blob b2" data-speed="-0.12"></i><i class="show-dots" data-speed="0.3"></i>
-  </div>
-  <div class="wrap show-in">
-    <div class="show-copy">
-      <p class="eyebrow" data-r>${t('The Bundle show', 'عرض Bundle')}</p>
-      <h2 class="h2" data-r>${t('It takes a circus <b>to pull off a launch.</b>', 'إطلاق ناجح <b>يحتاج سيركاً كاملاً.</b>')}</h2>
-      <p class="sec-side" data-r>${t('Magicians, acrobats, a ringmaster and someone juggling the clock. Ours happens to run on a call sheet — so the magic shows up on time.', 'سحرة، بهلوانات، مدير حلبة، وشخص يلاعب الوقت. سيركنا يمشي على جدول دقيق — فيصل السحر في موعده.')}</p>
-      <div class="show-acts" data-r>
-        <span>${t('Ideas', 'أفكار')}</span><span>${t('Film', 'أفلام')}</span><span>${t('Stage', 'مسرح')}</span><span>${t('PR', 'إعلام')}</span>
-      </div>
-    </div>
-    <div class="show-art" data-tilt>
-      <img src="assets/brand/circus.webp" alt="Illustrated cast of performers: a card trick, a magician pulling a rabbit, a unicyclist, parachutists and a ringmaster holding a broken clock" width="762" height="830" loading="lazy">
-    </div>
-  </div>
-</section>
-
-${stripeBand('Where integration happens.', 'حيث يحدث التكامل.')}
-
 <!-- ============ REEL STRIP ============ -->
 <section class="sec reel-sec" id="reel">
   <div class="wrap sec-head">

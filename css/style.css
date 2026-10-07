@@ -35,7 +35,7 @@ html[lang="ar"] {
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--ink); color: var(--fg);
   font-family: var(--f-body); font-size: 17px; line-height: 1.6;
@@ -1071,3 +1071,36 @@ html[dir="rtl"] .bm-step.is-on { animation-name: stepin-rtl; }
   html[dir="rtl"] .films-sec .geo-dot { left: auto; right: 10%; }
   .films-sec .geo-arc { top: -16%; }
 }
+
+/* ---------- Films reel v2: one row height, aligned tops + captions ---------- */
+.films-sec { --fh: clamp(300px, 50vh, 470px); }
+.films-track { align-items: flex-start; }
+.films-track .film-v { width: calc(var(--fh) * 9 / 16); }
+.films-track .film-l { width: calc(var(--fh) * 16 / 9); }
+.films-track .film-media { height: var(--fh); aspect-ratio: auto; }
+.films-track .film-cap { min-height: 96px; }
+.films-track .film-cap h3 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.films-track .film-more { align-self: flex-start; height: var(--fh); margin-bottom: 0; }
+.films-track .film:hover .film-media { transform: translateY(-8px); }
+/* geometry kept clear of the heading (heading sits on the inline-start side) */
+.films-sec .geo-sun { left: auto; right: auto; bottom: auto; top: -34%; inset-inline-end: -8%; width: clamp(280px, 30vw, 460px); }
+.films-sec .geo-dot { left: auto; right: auto; top: 16%; inset-inline-end: 30%; }
+.films-sec .geo-arc { right: auto; top: auto; bottom: -55%; inset-inline-start: 38%; width: clamp(360px, 40vw, 620px); opacity: .45; }
+html[dir="rtl"] .films-sec .geo-sun { left: auto; right: auto; }
+.films-head { max-width: 900px; }
+@media (max-width: 860px) {
+  .films-sec { --fh: 62vw; }
+  .films-track .film-v { width: calc(var(--fh) * 9 / 16); min-width: 46vw; }
+  .films-track .film-v .film-media { height: auto; aspect-ratio: 9 / 16; }
+  .films-track .film-l { width: 84vw; }
+  .films-track .film-l .film-media { height: auto; aspect-ratio: 16 / 9; }
+  .films-track .film-more { height: auto; min-height: 200px; }
+  .films-track .film-cap h3 { white-space: normal; }
+  .films-sec .geo-dot { top: 4%; inset-inline-end: 12%; }
+  .films-sec .geo-sun { top: -18%; }
+}
+.films-sec.no-pin .film:first-child { margin-inline-start: 0; }
+.films-sec.no-pin .film-more { margin-inline-end: 0; }
+.films-sec.no-pin .films-track::before, .films-sec.no-pin .films-track::after { content: ""; flex: 0 0 1px; margin-inline: calc(var(--gutter) - 25px) 0; }
+.films-sec.no-pin .films-track { gap: 24px; }
+.films-sec.no-pin .films-track { scroll-padding-inline: var(--gutter); }
