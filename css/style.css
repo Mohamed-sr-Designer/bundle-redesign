@@ -1157,3 +1157,62 @@ html[dir="rtl"] .films-sec .geo-sun { left: auto; right: auto; }
 .loader-meta span:first-child { color: rgba(255,255,255,.85); }
 .loader-n { font-size: 28px; letter-spacing: .02em; color: var(--yellow); }
 .loader-n::after { content: "%"; font-size: 13px; margin-inline-start: 2px; opacity: .8; }
+
+/* =========================================================================
+   Creative hero: the cast (illustration separated into floating actors)
+   ========================================================================= */
+.cast { position: absolute; top: 70px; bottom: 0; inset-inline-end: 0; width: min(48%, 640px); z-index: 0; pointer-events: none; }
+.cast > * { position: absolute; }
+.cast .cast-sun { width: 46%; aspect-ratio: 1; border-radius: 50%; background: var(--yellow); inset-inline-end: 6%; top: 34%; }
+.cast .cast-dot { width: 7%; aspect-ratio: 1; border-radius: 50%; background: var(--indigo); inset-inline-start: 18%; top: 12%; }
+.cast .cast-blob { width: 34%; aspect-ratio: 1.1; background: #F7B6D2; border-radius: 46% 54% 42% 58% / 55% 45% 55% 45%; inset-inline-start: 4%; bottom: 4%; animation: morph 12s ease-in-out infinite; }
+.actor { margin: 0; transition: transform .25s ease-out; }
+.actor img { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 22px rgba(18,21,43,.16)); }
+.actor .sticker { position: absolute; white-space: nowrap; animation: none; font-size: 11px; padding: 9px 13px; }
+html[lang="ar"] .actor .sticker { font-size: 13px; }
+.actor .sticker.y { background: var(--yellow); }
+.actor .sticker.k { background: var(--ink); color: var(--yellow); }
+.actor .sticker.p { background: #F7B6D2; }
+.actor .sticker { background: var(--paper); }
+.a-hand { width: 40%; inset-inline-start: -4%; top: 2%; }
+.a-hand img { animation: float-a 6s ease-in-out infinite; transform-origin: 20% 40%; }
+.a-hand .sticker { bottom: 6%; inset-inline-end: -6%; rotate: -6deg; }
+.a-flyer { width: 42%; inset-inline-end: 0; top: 0; }
+.a-flyer img { animation: leap 5s ease-in-out infinite; }
+.a-flyer .sticker { top: 4%; inset-inline-start: -10%; rotate: 7deg; }
+.a-magician { width: 36%; inset-inline-end: 12%; top: 40%; }
+.a-magician img { animation: float-b 7s ease-in-out infinite; }
+.a-magician .sticker { bottom: 10%; inset-inline-end: -18%; rotate: 4deg; }
+.a-ring { width: 44%; inset-inline-start: 4%; bottom: 0; }
+.a-ring img { -webkit-mask-image: linear-gradient(#000 72%, transparent); mask-image: linear-gradient(#000 72%, transparent); animation: float-c 8s ease-in-out infinite; transform-origin: 50% 100%; }
+.a-ring .sticker { top: 0; inset-inline-end: 0; rotate: -4deg; }
+html[dir="rtl"] .a-hand img, html[dir="rtl"] .a-flyer img, html[dir="rtl"] .a-magician img, html[dir="rtl"] .a-ring img { scale: -1 1; }
+@keyframes float-a { 50% { transform: translate(10px, 12px) rotate(4deg); } }
+@keyframes float-b { 50% { transform: translateY(-14px) rotate(-2deg); } }
+@keyframes float-c { 50% { transform: rotate(2deg); } }
+@keyframes leap { 0%, 100% { transform: translate(0, 0) rotate(0); } 50% { transform: translate(-18px, -16px) rotate(-5deg); } }
+.chute { width: auto; opacity: .95; animation: drift 14s linear infinite; top: -10%; }
+.chute.c1 { width: 17%; inset-inline-start: 34%; animation-duration: 16s; }
+.chute.c2 { width: 8%; inset-inline-start: 62%; animation-duration: 12s; animation-delay: -5s; }
+.chute.c3 { width: 11%; inset-inline-start: 82%; animation-duration: 18s; animation-delay: -10s; }
+@keyframes drift { 0% { transform: translate(0, 0) rotate(-6deg); opacity: 0; } 8% { opacity: 1; } 50% { transform: translate(-24px, 260px) rotate(6deg); } 92% { opacity: 1; } 100% { transform: translate(10px, 540px) rotate(-4deg); opacity: 0; } }
+.cr-hero { min-height: 92svh; }
+.cr-hero .phero-row .btn { position: relative; z-index: 2; }
+@media (max-width: 860px) {
+  .cast { position: relative; top: auto; width: 100%; height: 108vw; margin-top: -10px; }
+  .a-hand { width: 44%; } .a-flyer { width: 46%; } .a-magician { width: 40%; top: 36%; } .a-ring { width: 50%; }
+}
+@media (prefers-reduced-motion: reduce) { .chute { display: none; } }
+.cr-hero .phero-row { flex-direction: column; align-items: flex-start; gap: 28px; }
+.cr-hero .phero-sub { max-width: 46ch; }
+.cast { top: 104px; width: min(46%, 620px); }
+.a-flyer { top: 3%; }
+@media (max-width: 860px) { .cast { top: auto; } }
+@media (max-width: 860px) {
+  .cr-hero { display: flex; flex-direction: column; min-height: 0; }
+  .cr-hero .cast { order: 2; position: relative; top: auto; inset-inline-end: auto; width: 100%; height: 100vw; margin-top: 30px; }
+  .cr-hero .wrap { order: 1; }
+  .a-hand { width: 46%; top: 0; } .a-flyer { width: 48%; top: 2%; } .a-magician { width: 42%; top: 36%; inset-inline-end: 6%; } .a-ring { width: 54%; }
+  .actor .sticker { font-size: 10px; padding: 7px 10px; }
+}
+@media (max-width: 860px) { .a-hand { width: 40%; inset-inline-start: 0; top: 14%; } .a-flyer { width: 42%; top: 0; } }

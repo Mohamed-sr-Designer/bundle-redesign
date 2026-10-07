@@ -13,11 +13,15 @@ const caps = [
 
 const body = `
 <section class="phero cr-hero">
-  <div class="cr-circus" aria-hidden="true" data-tilt><img src="assets/brand/circus.webp" alt="" width="762" height="830"></div>
-  <div class="stickers" aria-hidden="true">
-    <span class="sticker s1">${t('Big idea', 'فكرة كبيرة')}</span>
-    <span class="sticker s2">${t('Arabic first', 'العربي أولاً')}</span>
-    <span class="sticker s3">${t('No templates', 'بدون قوالب')}</span>
+  <div class="cast" aria-hidden="true" data-cast>
+    <i class="cast-sun" data-depth="6"></i><i class="cast-dot" data-depth="18"></i><i class="cast-blob" data-depth="10"></i>
+    <img class="chute c1" src="assets/brand/cast/chute-a.webp" alt="" width="110" height="140">
+    <img class="chute c2" src="assets/brand/cast/chute-b.webp" alt="" width="52" height="60">
+    <img class="chute c3" src="assets/brand/cast/chute-c.webp" alt="" width="74" height="88">
+    <figure class="actor a-hand" data-depth="22"><img src="assets/brand/cast/hand.webp" alt="" width="252" height="252"><span class="sticker">${t('Big idea', 'فكرة كبيرة')}</span></figure>
+    <figure class="actor a-flyer" data-depth="34"><img src="assets/brand/cast/flyer.webp" alt="" width="238" height="220"><span class="sticker y">${t('Content that moves', 'محتوى يتحرك')}</span></figure>
+    <figure class="actor a-magician" data-depth="14"><img src="assets/brand/cast/magician.webp" alt="" width="216" height="232"><span class="sticker k">${t('No templates', 'بدون قوالب')}</span></figure>
+    <figure class="actor a-ring" data-depth="8"><img src="assets/brand/cast/ringmaster.webp" alt="" width="272" height="160"><span class="sticker p">${t('Arabic first', 'العربي أولاً')}</span></figure>
   </div>
   <div class="wrap">
     <p class="eyebrow" data-r>${t('Department 01 — Creative', 'القسم ٠١ — الإبداع')}</p>

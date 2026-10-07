@@ -403,6 +403,17 @@
     sec.addEventListener('pointerleave', function () { el.style.transform = ''; });
   });
 
+  /* ---------- 19b. Cast parallax (creative hero) ------------------------ */
+  qsa('[data-cast]').forEach(function (cast) {
+    if (!canHover || reduced) return;
+    var sec = cast.closest('section'), items = qsa('[data-depth]', cast);
+    sec.addEventListener('pointermove', function (e) {
+      var r = sec.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      items.forEach(function (it) { var k = +it.getAttribute('data-depth'); it.style.transform = 'translate(' + (-x * k) + 'px,' + (-y * k) + 'px)'; });
+    });
+    sec.addEventListener('pointerleave', function () { items.forEach(function (it) { it.style.transform = ''; }); });
+  });
+
   /* ---------- 20. GSAP motion -------------------------------------------- */
   function motion() {
     var g = w.gsap, ST = w.ScrollTrigger;
