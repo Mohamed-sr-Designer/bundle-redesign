@@ -164,11 +164,12 @@
   if (cur && w.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduced) {
     d.documentElement.classList.add('has-cursor');
     var dot = qs('.cursor-dot', cur), ring = qs('.cursor-ring', cur), lab = qs('b', ring);
-    var mx = -100, my = -100, rx = -100, ry = -100;
+    var mx = -100, my = -100, rx = -100, ry = -100, cs = 1;
     w.addEventListener('pointermove', function (e) { mx = e.clientX; my = e.clientY; dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)'; }, { passive: true });
     (function loop() {
       rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+      var ts = cur.classList.contains('is-label') ? 2.3 : cur.classList.contains('is-link') ? 1.6 : 1; cs += (ts - cs) * 0.2;
+      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) scale(' + cs + ')';
       requestAnimationFrame(loop);
     })();
     d.addEventListener('pointerover', function (e) {
